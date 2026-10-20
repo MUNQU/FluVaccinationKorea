@@ -1,0 +1,32 @@
+[project]
+name = "FluVaccinationKorea"
+version = "0.1.0"
+description = "Epidemiological model assessment of the flu vaccination campaigns in South Korea"
+authors = [
+    {name = "David Martínez Rodríguez", email = "damarro3@upv.es"},
+]
+license = "MIT"
+requires-python = ">=3.14.0"
+
+dependencies = [
+    "openpyxl>=3.1",
+    "pandas>=2.3",
+    "pdfplumber>=0.11",
+    "playwright>=1.50",
+    "pyhwp>=0.1b15",
+    "requests>=2.32",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4,<10.0",
+    "ruff>=0.12,<0.17",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "C90", "ARG", "ERA", "B007"]
+ignore = ["ERA001"]
+
+[tool.ruff.lint.per-file-ignores]
+# Embedded JavaScript for the headless browser.
+"scripts/kosis_vaccination.py" = ["E501"]

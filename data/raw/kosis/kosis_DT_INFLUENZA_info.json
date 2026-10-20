@@ -1,0 +1,2488 @@
+{
+ "analyzable": true,
+ "classInfoList": [
+  {
+   "classAllList": [],
+   "classEngNm": "Classification of Region of Regional Community'S Health Survey",
+   "classId": "CHS_CT",
+   "classNm": "시군구별",
+   "defaultItmCnt": 295,
+   "defaultItmList": [
+    "CHS_CT^1#001",
+    "CHS_CT^2#00101",
+    "CHS_CT^2#00102",
+    "CHS_CT^2#00103",
+    "CHS_CT^2#00104",
+    "CHS_CT^2#00105",
+    "CHS_CT^2#00106",
+    "CHS_CT^2#00107",
+    "CHS_CT^2#00108",
+    "CHS_CT^2#00109",
+    "CHS_CT^2#00110",
+    "CHS_CT^2#00111",
+    "CHS_CT^2#00112",
+    "CHS_CT^2#00113",
+    "CHS_CT^2#00114",
+    "CHS_CT^2#00115",
+    "CHS_CT^2#00116",
+    "CHS_CT^2#00117",
+    "CHS_CT^2#00118",
+    "CHS_CT^2#00119",
+    "CHS_CT^2#00120",
+    "CHS_CT^2#00121",
+    "CHS_CT^2#00122",
+    "CHS_CT^2#00123",
+    "CHS_CT^2#00124",
+    "CHS_CT^2#00125",
+    "CHS_CT^1#002",
+    "CHS_CT^2#00201",
+    "CHS_CT^2#00202",
+    "CHS_CT^2#00203",
+    "CHS_CT^2#00204",
+    "CHS_CT^2#00205",
+    "CHS_CT^2#00206",
+    "CHS_CT^2#00207",
+    "CHS_CT^2#00208",
+    "CHS_CT^2#00209",
+    "CHS_CT^2#00210",
+    "CHS_CT^2#00211",
+    "CHS_CT^2#00212",
+    "CHS_CT^2#00213",
+    "CHS_CT^2#00214",
+    "CHS_CT^2#00215",
+    "CHS_CT^2#00216",
+    "CHS_CT^1#003",
+    "CHS_CT^2#00301",
+    "CHS_CT^2#00302",
+    "CHS_CT^2#00303",
+    "CHS_CT^2#00304",
+    "CHS_CT^2#00305",
+    "CHS_CT^2#00306",
+    "CHS_CT^2#00307",
+    "CHS_CT^2#00308",
+    "CHS_CT^2#00309",
+    "CHS_CT^1#004",
+    "CHS_CT^2#00401",
+    "CHS_CT^2#00402",
+    "CHS_CT^2#00403",
+    "CHS_CT^2#00404",
+    "CHS_CT^2#00405",
+    "CHS_CT^2#00406",
+    "CHS_CT^2#00407",
+    "CHS_CT^2#00408",
+    "CHS_CT^2#00409",
+    "CHS_CT^2#00410",
+    "CHS_CT^1#005",
+    "CHS_CT^2#00501",
+    "CHS_CT^2#00502",
+    "CHS_CT^2#00503",
+    "CHS_CT^2#00504",
+    "CHS_CT^2#00505",
+    "CHS_CT^1#006",
+    "CHS_CT^2#00601",
+    "CHS_CT^2#00602",
+    "CHS_CT^2#00603",
+    "CHS_CT^2#00604",
+    "CHS_CT^2#00605",
+    "CHS_CT^1#007",
+    "CHS_CT^2#00701",
+    "CHS_CT^2#00702",
+    "CHS_CT^2#00703",
+    "CHS_CT^2#00704",
+    "CHS_CT^2#00705",
+    "CHS_CT^1#0071",
+    "CHS_CT^2#00711",
+    "CHS_CT^1#008",
+    "CHS_CT^2#00801",
+    "CHS_CT^2#00802",
+    "CHS_CT^3#0080201",
+    "CHS_CT^3#0080202",
+    "CHS_CT^3#0080203",
+    "CHS_CT^2#00803",
+    "CHS_CT^2#00804",
+    "CHS_CT^2#00805",
+    "CHS_CT^2#00806",
+    "CHS_CT^3#0080601",
+    "CHS_CT^3#0080602",
+    "CHS_CT^2#00807",
+    "CHS_CT^2#00808",
+    "CHS_CT^3#0080801",
+    "CHS_CT^3#0080802",
+    "CHS_CT^3#0080803",
+    "CHS_CT^2#00809",
+    "CHS_CT^2#00810",
+    "CHS_CT^2#00811",
+    "CHS_CT^2#00812",
+    "CHS_CT^2#00813",
+    "CHS_CT^2#00814",
+    "CHS_CT^2#00815",
+    "CHS_CT^2#00816",
+    "CHS_CT^2#00817",
+    "CHS_CT^2#00818",
+    "CHS_CT^2#00819",
+    "CHS_CT^2#00820",
+    "CHS_CT^2#00821",
+    "CHS_CT^3#0082101",
+    "CHS_CT^3#0082102",
+    "CHS_CT^3#0082103",
+    "CHS_CT^2#00822",
+    "CHS_CT^3#0082201",
+    "CHS_CT^3#0082202",
+    "CHS_CT^3#0082203",
+    "CHS_CT^3#0082204",
+    "CHS_CT^2#00823",
+    "CHS_CT^2#00824",
+    "CHS_CT^3#0082401",
+    "CHS_CT^3#0082402",
+    "CHS_CT^2#00825",
+    "CHS_CT^2#00826",
+    "CHS_CT^3#0082601",
+    "CHS_CT^3#0082602",
+    "CHS_CT^2#00827",
+    "CHS_CT^2#00828",
+    "CHS_CT^3#0082801",
+    "CHS_CT^3#0082802",
+    "CHS_CT^3#0082803",
+    "CHS_CT^2#00829",
+    "CHS_CT^2#00830",
+    "CHS_CT^3#0083001",
+    "CHS_CT^3#0083002",
+    "CHS_CT^2#00831",
+    "CHS_CT^3#0083101",
+    "CHS_CT^3#0083102",
+    "CHS_CT^3#0083103",
+    "CHS_CT^1#009",
+    "CHS_CT^2#00901",
+    "CHS_CT^2#00902",
+    "CHS_CT^2#00903",
+    "CHS_CT^2#00904",
+    "CHS_CT^2#00905",
+    "CHS_CT^2#00906",
+    "CHS_CT^2#00907",
+    "CHS_CT^2#00908",
+    "CHS_CT^2#00909",
+    "CHS_CT^2#00910",
+    "CHS_CT^2#00911",
+    "CHS_CT^2#00912",
+    "CHS_CT^2#00913",
+    "CHS_CT^2#00914",
+    "CHS_CT^2#00915",
+    "CHS_CT^2#00916",
+    "CHS_CT^2#00917",
+    "CHS_CT^2#00918",
+    "CHS_CT^1#010",
+    "CHS_CT^2#01001",
+    "CHS_CT^2#01002",
+    "CHS_CT^2#01003",
+    "CHS_CT^2#01004",
+    "CHS_CT^2#01005",
+    "CHS_CT^2#01006",
+    "CHS_CT^2#01007",
+    "CHS_CT^2#01008",
+    "CHS_CT^2#01009",
+    "CHS_CT^2#01010",
+    "CHS_CT^2#01013",
+    "CHS_CT^3#0101301",
+    "CHS_CT^3#0101302",
+    "CHS_CT^3#0101303",
+    "CHS_CT^3#0101304",
+    "CHS_CT^2#01012",
+    "CHS_CT^1#011",
+    "CHS_CT^2#01101",
+    "CHS_CT^2#01102",
+    "CHS_CT^2#01103",
+    "CHS_CT^2#01104",
+    "CHS_CT^2#01105",
+    "CHS_CT^2#01106",
+    "CHS_CT^2#01107",
+    "CHS_CT^2#01108",
+    "CHS_CT^2#01109",
+    "CHS_CT^2#01110",
+    "CHS_CT^2#01111",
+    "CHS_CT^2#01112",
+    "CHS_CT^2#01113",
+    "CHS_CT^3#0111301",
+    "CHS_CT^3#0111302",
+    "CHS_CT^2#01114",
+    "CHS_CT^2#01115",
+    "CHS_CT^2#01116",
+    "CHS_CT^1#012",
+    "CHS_CT^2#01201",
+    "CHS_CT^2#01202",
+    "CHS_CT^2#01203",
+    "CHS_CT^2#01204",
+    "CHS_CT^2#01205",
+    "CHS_CT^2#01206",
+    "CHS_CT^2#01207",
+    "CHS_CT^2#01208",
+    "CHS_CT^2#01209",
+    "CHS_CT^2#01210",
+    "CHS_CT^2#01211",
+    "CHS_CT^2#01212",
+    "CHS_CT^2#01213",
+    "CHS_CT^2#01214",
+    "CHS_CT^1#013",
+    "CHS_CT^2#01301",
+    "CHS_CT^2#01302",
+    "CHS_CT^2#01303",
+    "CHS_CT^2#01304",
+    "CHS_CT^2#01305",
+    "CHS_CT^2#01306",
+    "CHS_CT^2#01307",
+    "CHS_CT^2#01308",
+    "CHS_CT^2#01309",
+    "CHS_CT^2#01310",
+    "CHS_CT^2#01311",
+    "CHS_CT^2#01312",
+    "CHS_CT^2#01313",
+    "CHS_CT^2#01314",
+    "CHS_CT^2#01315",
+    "CHS_CT^2#01316",
+    "CHS_CT^2#01317",
+    "CHS_CT^2#01318",
+    "CHS_CT^2#01319",
+    "CHS_CT^2#01320",
+    "CHS_CT^2#01321",
+    "CHS_CT^2#01322",
+    "CHS_CT^1#014",
+    "CHS_CT^2#01401",
+    "CHS_CT^2#01402",
+    "CHS_CT^2#01403",
+    "CHS_CT^2#01404",
+    "CHS_CT^3#0140401",
+    "CHS_CT^3#0140402",
+    "CHS_CT^2#01405",
+    "CHS_CT^2#01406",
+    "CHS_CT^2#01407",
+    "CHS_CT^2#01408",
+    "CHS_CT^2#01409",
+    "CHS_CT^2#01410",
+    "CHS_CT^2#01411",
+    "CHS_CT^2#01412",
+    "CHS_CT^2#01413",
+    "CHS_CT^2#01414",
+    "CHS_CT^2#01415",
+    "CHS_CT^2#01416",
+    "CHS_CT^2#01417",
+    "CHS_CT^2#01418",
+    "CHS_CT^2#01419",
+    "CHS_CT^2#01420",
+    "CHS_CT^2#01421",
+    "CHS_CT^2#01422",
+    "CHS_CT^2#01423",
+    "CHS_CT^3#0142301",
+    "CHS_CT^3#0142302",
+    "CHS_CT^1#015",
+    "CHS_CT^2#01501",
+    "CHS_CT^2#01502",
+    "CHS_CT^2#01503",
+    "CHS_CT^2#01504",
+    "CHS_CT^2#01505",
+    "CHS_CT^2#01506",
+    "CHS_CT^3#0150601",
+    "CHS_CT^3#0150602",
+    "CHS_CT^3#0150603",
+    "CHS_CT^2#01507",
+    "CHS_CT^2#01508",
+    "CHS_CT^2#01509",
+    "CHS_CT^2#01510",
+    "CHS_CT^2#01511",
+    "CHS_CT^2#01512",
+    "CHS_CT^2#01513",
+    "CHS_CT^2#01514",
+    "CHS_CT^2#01515",
+    "CHS_CT^2#01516",
+    "CHS_CT^2#01517",
+    "CHS_CT^2#01518",
+    "CHS_CT^1#016",
+    "CHS_CT^2#01600",
+    "CHS_CT^3#01601",
+    "CHS_CT^3#0160201",
+    "CHS_CT^3#0160202",
+    "CHS_CT^2#01600A",
+    "CHS_CT^3#01603",
+    "CHS_CT^3#0160401",
+    "CHS_CT^3#0160402"
+   ],
+   "defaultItmMapList": [
+    {
+     "LVL": 1,
+     "ROWNUM": 1,
+     "ITM_ID": "001"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 2,
+     "ITM_ID": "00101"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 3,
+     "ITM_ID": "00102"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 4,
+     "ITM_ID": "00103"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 5,
+     "ITM_ID": "00104"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 6,
+     "ITM_ID": "00105"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 7,
+     "ITM_ID": "00106"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 8,
+     "ITM_ID": "00107"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 9,
+     "ITM_ID": "00108"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 10,
+     "ITM_ID": "00109"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 11,
+     "ITM_ID": "00110"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 12,
+     "ITM_ID": "00111"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 13,
+     "ITM_ID": "00112"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 14,
+     "ITM_ID": "00113"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 15,
+     "ITM_ID": "00114"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 16,
+     "ITM_ID": "00115"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 17,
+     "ITM_ID": "00116"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 18,
+     "ITM_ID": "00117"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 19,
+     "ITM_ID": "00118"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 20,
+     "ITM_ID": "00119"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 21,
+     "ITM_ID": "00120"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 22,
+     "ITM_ID": "00121"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 23,
+     "ITM_ID": "00122"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 24,
+     "ITM_ID": "00123"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 25,
+     "ITM_ID": "00124"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 26,
+     "ITM_ID": "00125"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 27,
+     "ITM_ID": "002"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 28,
+     "ITM_ID": "00201"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 29,
+     "ITM_ID": "00202"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 30,
+     "ITM_ID": "00203"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 31,
+     "ITM_ID": "00204"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 32,
+     "ITM_ID": "00205"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 33,
+     "ITM_ID": "00206"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 34,
+     "ITM_ID": "00207"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 35,
+     "ITM_ID": "00208"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 36,
+     "ITM_ID": "00209"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 37,
+     "ITM_ID": "00210"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 38,
+     "ITM_ID": "00211"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 39,
+     "ITM_ID": "00212"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 40,
+     "ITM_ID": "00213"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 41,
+     "ITM_ID": "00214"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 42,
+     "ITM_ID": "00215"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 43,
+     "ITM_ID": "00216"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 44,
+     "ITM_ID": "003"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 45,
+     "ITM_ID": "00301"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 46,
+     "ITM_ID": "00302"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 47,
+     "ITM_ID": "00303"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 48,
+     "ITM_ID": "00304"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 49,
+     "ITM_ID": "00305"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 50,
+     "ITM_ID": "00306"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 51,
+     "ITM_ID": "00307"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 52,
+     "ITM_ID": "00308"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 53,
+     "ITM_ID": "00309"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 54,
+     "ITM_ID": "004"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 55,
+     "ITM_ID": "00401"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 56,
+     "ITM_ID": "00402"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 57,
+     "ITM_ID": "00403"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 58,
+     "ITM_ID": "00404"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 59,
+     "ITM_ID": "00405"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 60,
+     "ITM_ID": "00406"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 61,
+     "ITM_ID": "00407"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 62,
+     "ITM_ID": "00408"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 63,
+     "ITM_ID": "00409"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 64,
+     "ITM_ID": "00410"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 65,
+     "ITM_ID": "005"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 66,
+     "ITM_ID": "00501"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 67,
+     "ITM_ID": "00502"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 68,
+     "ITM_ID": "00503"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 69,
+     "ITM_ID": "00504"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 70,
+     "ITM_ID": "00505"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 71,
+     "ITM_ID": "006"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 72,
+     "ITM_ID": "00601"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 73,
+     "ITM_ID": "00602"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 74,
+     "ITM_ID": "00603"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 75,
+     "ITM_ID": "00604"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 76,
+     "ITM_ID": "00605"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 77,
+     "ITM_ID": "007"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 78,
+     "ITM_ID": "00701"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 79,
+     "ITM_ID": "00702"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 80,
+     "ITM_ID": "00703"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 81,
+     "ITM_ID": "00704"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 82,
+     "ITM_ID": "00705"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 83,
+     "ITM_ID": "0071"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 84,
+     "ITM_ID": "00711"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 85,
+     "ITM_ID": "008"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 86,
+     "ITM_ID": "00801"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 87,
+     "ITM_ID": "00802"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 88,
+     "ITM_ID": "0080201"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 89,
+     "ITM_ID": "0080202"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 90,
+     "ITM_ID": "0080203"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 91,
+     "ITM_ID": "00803"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 92,
+     "ITM_ID": "00804"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 93,
+     "ITM_ID": "00805"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 94,
+     "ITM_ID": "00806"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 95,
+     "ITM_ID": "0080601"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 96,
+     "ITM_ID": "0080602"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 97,
+     "ITM_ID": "00807"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 98,
+     "ITM_ID": "00808"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 99,
+     "ITM_ID": "0080801"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 100,
+     "ITM_ID": "0080802"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 101,
+     "ITM_ID": "0080803"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 102,
+     "ITM_ID": "00809"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 103,
+     "ITM_ID": "00810"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 104,
+     "ITM_ID": "00811"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 105,
+     "ITM_ID": "00812"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 106,
+     "ITM_ID": "00813"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 107,
+     "ITM_ID": "00814"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 108,
+     "ITM_ID": "00815"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 109,
+     "ITM_ID": "00816"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 110,
+     "ITM_ID": "00817"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 111,
+     "ITM_ID": "00818"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 112,
+     "ITM_ID": "00819"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 113,
+     "ITM_ID": "00820"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 114,
+     "ITM_ID": "00821"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 115,
+     "ITM_ID": "0082101"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 116,
+     "ITM_ID": "0082102"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 117,
+     "ITM_ID": "0082103"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 118,
+     "ITM_ID": "00822"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 119,
+     "ITM_ID": "0082201"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 120,
+     "ITM_ID": "0082202"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 121,
+     "ITM_ID": "0082203"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 122,
+     "ITM_ID": "0082204"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 123,
+     "ITM_ID": "00823"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 124,
+     "ITM_ID": "00824"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 125,
+     "ITM_ID": "0082401"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 126,
+     "ITM_ID": "0082402"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 127,
+     "ITM_ID": "00825"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 128,
+     "ITM_ID": "00826"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 129,
+     "ITM_ID": "0082601"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 130,
+     "ITM_ID": "0082602"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 131,
+     "ITM_ID": "00827"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 132,
+     "ITM_ID": "00828"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 133,
+     "ITM_ID": "0082801"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 134,
+     "ITM_ID": "0082802"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 135,
+     "ITM_ID": "0082803"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 136,
+     "ITM_ID": "00829"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 137,
+     "ITM_ID": "00830"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 138,
+     "ITM_ID": "0083001"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 139,
+     "ITM_ID": "0083002"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 140,
+     "ITM_ID": "00831"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 141,
+     "ITM_ID": "0083101"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 142,
+     "ITM_ID": "0083102"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 143,
+     "ITM_ID": "0083103"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 144,
+     "ITM_ID": "009"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 145,
+     "ITM_ID": "00901"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 146,
+     "ITM_ID": "00902"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 147,
+     "ITM_ID": "00903"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 148,
+     "ITM_ID": "00904"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 149,
+     "ITM_ID": "00905"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 150,
+     "ITM_ID": "00906"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 151,
+     "ITM_ID": "00907"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 152,
+     "ITM_ID": "00908"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 153,
+     "ITM_ID": "00909"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 154,
+     "ITM_ID": "00910"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 155,
+     "ITM_ID": "00911"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 156,
+     "ITM_ID": "00912"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 157,
+     "ITM_ID": "00913"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 158,
+     "ITM_ID": "00914"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 159,
+     "ITM_ID": "00915"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 160,
+     "ITM_ID": "00916"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 161,
+     "ITM_ID": "00917"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 162,
+     "ITM_ID": "00918"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 163,
+     "ITM_ID": "010"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 164,
+     "ITM_ID": "01001"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 165,
+     "ITM_ID": "01002"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 166,
+     "ITM_ID": "01003"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 167,
+     "ITM_ID": "01004"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 168,
+     "ITM_ID": "01005"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 169,
+     "ITM_ID": "01006"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 170,
+     "ITM_ID": "01007"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 171,
+     "ITM_ID": "01008"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 172,
+     "ITM_ID": "01009"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 173,
+     "ITM_ID": "01010"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 174,
+     "ITM_ID": "01013"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 175,
+     "ITM_ID": "0101301"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 176,
+     "ITM_ID": "0101302"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 177,
+     "ITM_ID": "0101303"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 178,
+     "ITM_ID": "0101304"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 179,
+     "ITM_ID": "01012"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 180,
+     "ITM_ID": "011"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 181,
+     "ITM_ID": "01101"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 182,
+     "ITM_ID": "01102"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 183,
+     "ITM_ID": "01103"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 184,
+     "ITM_ID": "01104"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 185,
+     "ITM_ID": "01105"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 186,
+     "ITM_ID": "01106"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 187,
+     "ITM_ID": "01107"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 188,
+     "ITM_ID": "01108"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 189,
+     "ITM_ID": "01109"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 190,
+     "ITM_ID": "01110"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 191,
+     "ITM_ID": "01111"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 192,
+     "ITM_ID": "01112"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 193,
+     "ITM_ID": "01113"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 194,
+     "ITM_ID": "0111301"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 195,
+     "ITM_ID": "0111302"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 196,
+     "ITM_ID": "01114"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 197,
+     "ITM_ID": "01115"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 198,
+     "ITM_ID": "01116"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 199,
+     "ITM_ID": "012"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 200,
+     "ITM_ID": "01201"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 201,
+     "ITM_ID": "01202"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 202,
+     "ITM_ID": "01203"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 203,
+     "ITM_ID": "01204"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 204,
+     "ITM_ID": "01205"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 205,
+     "ITM_ID": "01206"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 206,
+     "ITM_ID": "01207"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 207,
+     "ITM_ID": "01208"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 208,
+     "ITM_ID": "01209"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 209,
+     "ITM_ID": "01210"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 210,
+     "ITM_ID": "01211"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 211,
+     "ITM_ID": "01212"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 212,
+     "ITM_ID": "01213"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 213,
+     "ITM_ID": "01214"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 214,
+     "ITM_ID": "013"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 215,
+     "ITM_ID": "01301"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 216,
+     "ITM_ID": "01302"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 217,
+     "ITM_ID": "01303"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 218,
+     "ITM_ID": "01304"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 219,
+     "ITM_ID": "01305"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 220,
+     "ITM_ID": "01306"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 221,
+     "ITM_ID": "01307"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 222,
+     "ITM_ID": "01308"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 223,
+     "ITM_ID": "01309"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 224,
+     "ITM_ID": "01310"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 225,
+     "ITM_ID": "01311"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 226,
+     "ITM_ID": "01312"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 227,
+     "ITM_ID": "01313"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 228,
+     "ITM_ID": "01314"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 229,
+     "ITM_ID": "01315"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 230,
+     "ITM_ID": "01316"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 231,
+     "ITM_ID": "01317"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 232,
+     "ITM_ID": "01318"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 233,
+     "ITM_ID": "01319"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 234,
+     "ITM_ID": "01320"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 235,
+     "ITM_ID": "01321"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 236,
+     "ITM_ID": "01322"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 237,
+     "ITM_ID": "014"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 238,
+     "ITM_ID": "01401"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 239,
+     "ITM_ID": "01402"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 240,
+     "ITM_ID": "01403"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 241,
+     "ITM_ID": "01404"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 242,
+     "ITM_ID": "0140401"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 243,
+     "ITM_ID": "0140402"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 244,
+     "ITM_ID": "01405"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 245,
+     "ITM_ID": "01406"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 246,
+     "ITM_ID": "01407"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 247,
+     "ITM_ID": "01408"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 248,
+     "ITM_ID": "01409"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 249,
+     "ITM_ID": "01410"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 250,
+     "ITM_ID": "01411"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 251,
+     "ITM_ID": "01412"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 252,
+     "ITM_ID": "01413"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 253,
+     "ITM_ID": "01414"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 254,
+     "ITM_ID": "01415"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 255,
+     "ITM_ID": "01416"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 256,
+     "ITM_ID": "01417"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 257,
+     "ITM_ID": "01418"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 258,
+     "ITM_ID": "01419"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 259,
+     "ITM_ID": "01420"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 260,
+     "ITM_ID": "01421"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 261,
+     "ITM_ID": "01422"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 262,
+     "ITM_ID": "01423"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 263,
+     "ITM_ID": "0142301"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 264,
+     "ITM_ID": "0142302"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 265,
+     "ITM_ID": "015"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 266,
+     "ITM_ID": "01501"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 267,
+     "ITM_ID": "01502"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 268,
+     "ITM_ID": "01503"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 269,
+     "ITM_ID": "01504"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 270,
+     "ITM_ID": "01505"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 271,
+     "ITM_ID": "01506"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 272,
+     "ITM_ID": "0150601"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 273,
+     "ITM_ID": "0150602"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 274,
+     "ITM_ID": "0150603"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 275,
+     "ITM_ID": "01507"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 276,
+     "ITM_ID": "01508"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 277,
+     "ITM_ID": "01509"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 278,
+     "ITM_ID": "01510"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 279,
+     "ITM_ID": "01511"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 280,
+     "ITM_ID": "01512"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 281,
+     "ITM_ID": "01513"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 282,
+     "ITM_ID": "01514"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 283,
+     "ITM_ID": "01515"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 284,
+     "ITM_ID": "01516"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 285,
+     "ITM_ID": "01517"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 286,
+     "ITM_ID": "01518"
+    },
+    {
+     "LVL": 1,
+     "ROWNUM": 287,
+     "ITM_ID": "016"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 288,
+     "ITM_ID": "01600"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 289,
+     "ITM_ID": "01601"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 290,
+     "ITM_ID": "0160201"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 291,
+     "ITM_ID": "0160202"
+    },
+    {
+     "LVL": 2,
+     "ROWNUM": 292,
+     "ITM_ID": "01600A"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 293,
+     "ITM_ID": "01603"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 294,
+     "ITM_ID": "0160401"
+    },
+    {
+     "LVL": 3,
+     "ROWNUM": 295,
+     "ITM_ID": "0160402"
+    }
+   ],
+   "depthLvl": "3",
+   "highLightAllList": [],
+   "highLightBoldList": [],
+   "itmCnt": 295,
+   "itmList": [
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Seoul",
+     "itmId": "001",
+     "upItmId": null,
+     "rownum": 1,
+     "objVarId": "CHS_CT",
+     "charItmSn": 1,
+     "leaf": 0,
+     "scrKor": "서울특별시"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Busan",
+     "itmId": "002",
+     "upItmId": null,
+     "rownum": 2,
+     "objVarId": "CHS_CT",
+     "charItmSn": 27,
+     "leaf": 0,
+     "scrKor": "부산광역시"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Daegu",
+     "itmId": "003",
+     "upItmId": null,
+     "rownum": 3,
+     "objVarId": "CHS_CT",
+     "charItmSn": 44,
+     "leaf": 0,
+     "scrKor": "대구광역시"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Incheon",
+     "itmId": "004",
+     "upItmId": null,
+     "rownum": 4,
+     "objVarId": "CHS_CT",
+     "charItmSn": 54,
+     "leaf": 0,
+     "scrKor": "인천광역시"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Gwangju",
+     "itmId": "005",
+     "upItmId": null,
+     "rownum": 5,
+     "objVarId": "CHS_CT",
+     "charItmSn": 65,
+     "leaf": 0,
+     "scrKor": "광주광역시"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Daejeon",
+     "itmId": "006",
+     "upItmId": null,
+     "rownum": 6,
+     "objVarId": "CHS_CT",
+     "charItmSn": 71,
+     "leaf": 0,
+     "scrKor": "대전광역시"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Ulsan",
+     "itmId": "007",
+     "upItmId": null,
+     "rownum": 7,
+     "objVarId": "CHS_CT",
+     "charItmSn": 77,
+     "leaf": 0,
+     "scrKor": "울산광역시"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Sejong",
+     "itmId": "0071",
+     "upItmId": null,
+     "rownum": 8,
+     "objVarId": "CHS_CT",
+     "charItmSn": 83,
+     "leaf": 0,
+     "scrKor": "세종특별자치시"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Gyeonggi-Do",
+     "itmId": "008",
+     "upItmId": null,
+     "rownum": 9,
+     "objVarId": "CHS_CT",
+     "charItmSn": 85,
+     "leaf": 0,
+     "scrKor": "경기도"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Gangwon-Do",
+     "itmId": "009",
+     "upItmId": null,
+     "rownum": 10,
+     "objVarId": "CHS_CT",
+     "charItmSn": 141,
+     "leaf": 0,
+     "scrKor": "강원특별자치도"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Chungcheongbuk-Do",
+     "itmId": "010",
+     "upItmId": null,
+     "rownum": 11,
+     "objVarId": "CHS_CT",
+     "charItmSn": 160,
+     "leaf": 0,
+     "scrKor": "충청북도"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Chungcheongnam-Do",
+     "itmId": "011",
+     "upItmId": null,
+     "rownum": 12,
+     "objVarId": "CHS_CT",
+     "charItmSn": 177,
+     "leaf": 0,
+     "scrKor": "충청남도"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Jeollabuk-Do",
+     "itmId": "012",
+     "upItmId": null,
+     "rownum": 13,
+     "objVarId": "CHS_CT",
+     "charItmSn": 194,
+     "leaf": 0,
+     "scrKor": "전북특별자치도"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Jeollanam-Do",
+     "itmId": "013",
+     "upItmId": null,
+     "rownum": 14,
+     "objVarId": "CHS_CT",
+     "charItmSn": 209,
+     "leaf": 0,
+     "scrKor": "전라남도"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Gyeongsangbuk-Do",
+     "itmId": "014",
+     "upItmId": null,
+     "rownum": 15,
+     "objVarId": "CHS_CT",
+     "charItmSn": 232,
+     "leaf": 0,
+     "scrKor": "경상북도"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Gyeongsangnam-Do",
+     "itmId": "015",
+     "upItmId": null,
+     "rownum": 16,
+     "objVarId": "CHS_CT",
+     "charItmSn": 260,
+     "leaf": 0,
+     "scrKor": "경상남도"
+    },
+    {
+     "lvl": 1,
+     "orgId": "177",
+     "tblId": "DT_INFLUENZA",
+     "scrEng": "Jeju-Do",
+     "itmId": "016",
+     "upItmId": null,
+     "rownum": 17,
+     "objVarId": "CHS_CT",
+     "charItmSn": 282,
+     "leaf": 0,
+     "scrKor": "제주특별자치도"
+    }
+   ],
+   "listClassLvl": [
+    {
+     "lvl": 1,
+     "objVarId": "CHS_CT",
+     "lvlCnt": 17
+    },
+    {
+     "lvl": 2,
+     "objVarId": "CHS_CT",
+     "lvlCnt": 232
+    },
+    {
+     "lvl": 3,
+     "objVarId": "CHS_CT",
+     "lvlCnt": 46
+    }
+   ],
+   "sn": "1",
+   "totIgnrAt": "N",
+   "varOrdSn": "1",
+   "visible": true
+  }
+ ],
+ "colClsAt": "N",
+ "containPeriod": " 년 2008 ~ 2025",
+ "defaultAction": "/statHtml.do",
+ "defaultItem": "null",
+ "defaultPeriodCnt": 1,
+ "defaultPeriodStr": "Y#",
+ "dimCo": 1475,
+ "dimUnitYn": "N",
+ "directYn": "N",
+ "downloadable": true,
+ "existCmmtEng": "Y",
+ "existCmmtKor": "Y",
+ "existStblCmmtEng": "Y",
+ "existStblCmmtKor": "Y",
+ "highLightInfo": null,
+ "highLightInfoList": [],
+ "itemCnt": 5,
+ "itemInfo": {
+  "defaultItmCnt": 5,
+  "defaultItmList": [
+   "N",
+   "CR",
+   "CR_SE",
+   "SR",
+   "SR_SE"
+  ],
+  "itmCnt": 5,
+  "itmEngNm": "ITEM",
+  "itmId": "13999001",
+  "itmList": [
+   {
+    "lvl": 1,
+    "orgId": "177",
+    "tblId": "DT_INFLUENZA",
+    "scrEng": "N",
+    "itmId": "N",
+    "upItmId": null,
+    "rownum": 1,
+    "objVarId": "13999001",
+    "charItmSn": 1,
+    "leaf": 1,
+    "scrKor": "응답자수"
+   },
+   {
+    "lvl": 1,
+    "orgId": "177",
+    "tblId": "DT_INFLUENZA",
+    "scrEng": "Crude Death Rate",
+    "itmId": "CR",
+    "upItmId": null,
+    "rownum": 2,
+    "objVarId": "13999001",
+    "charItmSn": 2,
+    "leaf": 1,
+    "scrKor": "조율"
+   },
+   {
+    "lvl": 1,
+    "orgId": "177",
+    "tblId": "DT_INFLUENZA",
+    "scrEng": "Standard Error",
+    "itmId": "CR_SE",
+    "upItmId": null,
+    "rownum": 3,
+    "objVarId": "13999001",
+    "charItmSn": 3,
+    "leaf": 1,
+    "scrKor": "조율표준오차"
+   },
+   {
+    "lvl": 1,
+    "orgId": "177",
+    "tblId": "DT_INFLUENZA",
+    "scrEng": "Standardized Rate",
+    "itmId": "SR",
+    "upItmId": null,
+    "rownum": 4,
+    "objVarId": "13999001",
+    "charItmSn": 4,
+    "leaf": 1,
+    "scrKor": "표준화율"
+   },
+   {
+    "lvl": 1,
+    "orgId": "177",
+    "tblId": "DT_INFLUENZA",
+    "scrEng": "Standard Error",
+    "itmId": "SR_SE",
+    "upItmId": null,
+    "rownum": 5,
+    "objVarId": "13999001",
+    "charItmSn": 5,
+    "leaf": 1,
+    "scrKor": "표준화율표준오차"
+   }
+  ],
+  "itmNm": "항목"
+ },
+ "levelExpr": "S",
+ "massYn": "N",
+ "mixCnt": 0,
+ "olapStl": "0S20000000Y01",
+ "orgId": "177",
+ "orgNm": "질병관리청",
+ "paramInfo": {
+  "analClass": "",
+  "analCmpr": "",
+  "analCmprNm": "",
+  "analCmprNmEng": "",
+  "analCombo": "",
+  "analItem": "",
+  "analText": "",
+  "analTextTblNm": "",
+  "analTime": "",
+  "analType": "",
+  "analTypeNm": "",
+  "analTypeNmEng": "",
+  "analWithCHGRATE": "",
+  "chargerLvl": "",
+  "classAllArr": "",
+  "classListForWhereClause": [],
+  "classSet": "",
+  "cmmtChk": "N",
+  "colAxis": "",
+  "condTable": "NSI.TN_STAT_HTML_COND_WEB",
+  "connPath": "",
+  "contextPath": "/statHtml",
+  "dataOpt": "ko",
+  "dbUser": "NSI.",
+  "dbUserOrigin": "NSI",
+  "debug": "",
+  "defaulPeriodArr": "",
+  "defaultClassArr": "",
+  "defaultItmArr": "",
+  "dimCo": "",
+  "direct": "",
+  "diviSearchYn": "",
+  "doAnal": "N",
+  "docId": "",
+  "downGridCellMerge": "",
+  "downGridCsvType": "",
+  "downGridMeta": "",
+  "downGridSdmxDataType": "",
+  "downGridSdmxType": "",
+  "downGridTxtType": "",
+  "downLargeExprType": "",
+  "downLargeFileType": "",
+  "downLargeSort": "",
+  "empId": "",
+  "empNm": "",
+  "enableCellUnit": "N",
+  "enableLevelExpr": "Y",
+  "enableParentLevel": "",
+  "enableWeight": "N",
+  "endNum": "",
+  "etldbLink": "@ETLDB",
+  "existStblCmmtEng": "Y",
+  "existStblCmmtKor": "Y",
+  "expDash": "",
+  "exprYn": "",
+  "fieldList": "",
+  "first_open": "",
+  "fnExcptCd": "",
+  "folderId": "",
+  "funcPrdSe": "",
+  "highLightStr": "",
+  "inheritYn": "N",
+  "ipAddr": "14.51.62.242",
+  "isChangedDataOpt": "",
+  "isFirst": "Y",
+  "isType": "",
+  "itemMultiply": "",
+  "itmNm": "",
+  "itm_id": "",
+  "key": "",
+  "keyChk": "177DT_INFLUENZAnullnull",
+  "keyDate": "",
+  "language": "ko",
+  "lastChk": "",
+  "lev": "",
+  "listId": "",
+  "logSeq": "",
+  "markType": "",
+  "maxCellOver": "",
+  "mobChk": false,
+  "mode": "",
+  "myscrabTblNm": "",
+  "myscrapPeriod": "",
+  "new_win": "",
+  "noSelect": "",
+  "obj_var_id": "",
+  "ordColIdx": "",
+  "ordType": "",
+  "orderBy": "",
+  "orderStr": "",
+  "orgId": "177",
+  "originData": "",
+  "originOrgId": "",
+  "originTblId": "",
+  "pageEnd": 0,
+  "pageNow": 0,
+  "pageStart": 0,
+  "paramStr": "",
+  "periodCo": "",
+  "periodStr": "Y",
+  "prdDe": "",
+  "prdSe": "",
+  "prdSort": "asc",
+  "pub": "",
+  "pubLog": "4",
+  "pubSeType": "",
+  "query": "",
+  "relChkOrgId": "",
+  "relChkTblId": "",
+  "relUserYn": "Y",
+  "relYn": "N",
+  "reqCellCnt": "0",
+  "rowAxis": "",
+  "scrId": "",
+  "serverLocation": "NSO",
+  "serverType": "service",
+  "serverTypeOrigin": "service",
+  "sessionId": "k7jaYIJZd-oZfsxCuymTfD0XQAGyYDuUzy3VtVRG_DT_INFLUENZA",
+  "smblYn": "",
+  "st": "",
+  "startNum": "",
+  "statId": "2008057",
+  "statJipyoStr": "",
+  "tabYn": "",
+  "tableType": "default",
+  "tblEngNm": "Influenza Vaccination For A Year",
+  "tblId": "DT_INFLUENZA",
+  "tblNm": "시·군·구별 연간 인플루엔자 예방접종률",
+  "tblSe": "",
+  "tmprScrId": "",
+  "treeSearchKeyword": "",
+  "treeSearchOption": "",
+  "url": "",
+  "useAddFuncLog": "",
+  "usePivot": "N",
+  "view": "table",
+  "viewKind": "",
+  "viewSubKind": "",
+  "viewType": "",
+  "vwCd": "MT_ZTITLE"
+ },
+ "periodCnt": 18,
+ "periodInfo": {
+  "codeB": "B",
+  "codeD": "D",
+  "codeF": "",
+  "codeH": "H",
+  "codeM": "M",
+  "codeQ": "Q",
+  "codeT": "T",
+  "codeY": "Y",
+  "defaultEndB": "",
+  "defaultEndD": "",
+  "defaultEndF": "",
+  "defaultEndH": "",
+  "defaultEndM": "",
+  "defaultEndQ": "",
+  "defaultEndT": "",
+  "defaultEndY": "2025",
+  "defaultListB": [],
+  "defaultListD": [],
+  "defaultListF": [],
+  "defaultListH": [],
+  "defaultListM": [],
+  "defaultListQ": [],
+  "defaultListT": [],
+  "defaultListY": [
+   "2025"
+  ],
+  "defaultStartB": "",
+  "defaultStartD": "",
+  "defaultStartF": "",
+  "defaultStartH": "",
+  "defaultStartM": "",
+  "defaultStartQ": "",
+  "defaultStartT": "",
+  "defaultStartY": "",
+  "endB": "",
+  "endD": "",
+  "endF": "",
+  "endH": "",
+  "endM": "",
+  "endQ": "",
+  "endT": "",
+  "endY": "2025",
+  "listB": [],
+  "listD": [],
+  "listF": [],
+  "listH": [],
+  "listM": [],
+  "listQ": [],
+  "listT": [],
+  "listY": [
+   "2008",
+   "2009",
+   "2010",
+   "2011",
+   "2012",
+   "2013",
+   "2014",
+   "2015",
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "nameB": "격월",
+  "nameD": "일",
+  "nameF": "",
+  "nameH": "반기",
+  "nameM": "월",
+  "nameQ": "분기",
+  "nameT": "순기",
+  "nameY": "년",
+  "periodNm": "기간",
+  "startB": "",
+  "startD": "",
+  "startF": "",
+  "startH": "",
+  "startM": "",
+  "startQ": "",
+  "startT": "",
+  "startY": "2008"
+ },
+ "periodStr": "Y",
+ "pivotInfo": {
+  "colEngNmList": [
+   "TIME",
+   "ITEM"
+  ],
+  "colList": [
+   "TIME",
+   "ITEM"
+  ],
+  "colNmList": [
+   "시점",
+   "항목"
+  ],
+  "rowEngNmList": [
+   "Classification of Region of Regional Community'S Health Survey"
+  ],
+  "rowList": [
+   "CHS_CT"
+  ],
+  "rowNmList": [
+   "시군구별"
+  ]
+ },
+ "popupFileHeight": "",
+ "popupFileNm": "",
+ "popupHtmlUrl": "https://kosis.kr/tbl_popup/",
+ "pubLog": "4",
+ "renewalDate": "2026-01-14",
+ "serverType": "service",
+ "serverUrl": "https://kosis.kr",
+ "smblYn": "",
+ "statId": "2008057",
+ "statLinkInfo": {
+  "appAt": "Y",
+  "confmNo": "117075",
+  "existInquire": true,
+  "existInquireLink": false,
+  "existMoreBtn": true,
+  "existStatNm": true,
+  "exprInquire": "043-719-7399",
+  "exprStatNm": "「지역사회건강조사」, 질병관리청",
+  "inptYear": "2025",
+  "linkStatComment": "https://www.k-stat.go.kr/metasvc/msba100/statsdcdta",
+  "linkStatSno": "https://meta.narastat.kr/metasvc/svc/SvcMetaDcDtaPopup.do",
+  "newsLink": "",
+  "orgEngNm": "",
+  "pubLink": "https://chs.kdca.go.kr/chs/stats/statsMain.do",
+  "sigaUrl": "https://kosis.kr/gen_etl/start.jsp",
+  "snameeng": "Community Health Survey",
+  "statId": "2008057",
+  "urlCn": "",
+  "urlStatNm": "질병관리청,「지역사회건강조사」"
+ },
+ "statOrgId": "177",
+ "tabMenuList": [
+  {
+   "objVarId": "13999001",
+   "scrKor": "항목",
+   "scrEng": "ITEM",
+   "lvlCo": 1,
+   "scrLvlCo": null,
+   "pubSe": "1210114",
+   "varOrdSn": 0,
+   "varOrdCur": null,
+   "visibleYn": null,
+   "totIgnrAt": null,
+   "orgId": "177",
+   "tblId": "DT_INFLUENZA",
+   "dbUser": "NSI.",
+   "serverType": "service",
+   "searchItem": "Y"
+  },
+  {
+   "objVarId": "CHS_CT",
+   "scrKor": "시군구별",
+   "scrEng": "Classification of Region of Regional Community'S Health Survey",
+   "lvlCo": 3,
+   "scrLvlCo": 3,
+   "pubSe": "1210114",
+   "varOrdSn": 1,
+   "varOrdCur": null,
+   "visibleYn": "Y",
+   "totIgnrAt": "N",
+   "orgId": "177",
+   "tblId": "DT_INFLUENZA",
+   "dbUser": "NSI.",
+   "serverType": "service",
+   "searchCondition": "D",
+   "classLvl": 3
+  },
+  {
+   "objVarId": "period",
+   "scrKor": "기간",
+   "scrEng": "TIME",
+   "lvlCo": 0,
+   "scrLvlCo": 0,
+   "pubSe": null,
+   "varOrdSn": 0,
+   "varOrdCur": 0,
+   "visibleYn": null,
+   "totIgnrAt": null,
+   "orgId": "177",
+   "tblId": "DT_INFLUENZA",
+   "dbUser": "NSI.",
+   "serverType": "service",
+   "serverTypeOrigin": "service"
+  }
+ ],
+ "tblEngNm": "Influenza Vaccination For A Year",
+ "tblId": "DT_INFLUENZA",
+ "tblNm": "시·군·구별 연간 인플루엔자 예방접종률",
+ "tblSe": "",
+ "unitId": "",
+ "unitNm": "",
+ "unitNmEng": "",
+ "unitNmKor": "",
+ "url": "https://kosis.kr",
+ "wgtYn": "N"
+}

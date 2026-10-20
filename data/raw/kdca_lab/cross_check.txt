@@ -1,0 +1,4 @@
+API rows: 1096, Power BI rows: 1096, matched: 1096
+SPEC_PROCESSED_NB: 0 mismatching weeks
+AH3: 0 mismatching weeks
+INF_ALL: 0 mismatching weeks
