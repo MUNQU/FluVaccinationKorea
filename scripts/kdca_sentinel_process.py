@@ -201,8 +201,24 @@ def main() -> None:
         ]
         ages = latest(ages[trusted], key)
         # From 2017-2018 on, dportal has every age group; bulletin rows would
-        # only add stray old-style bands.
-        ages = ages[ages["season"] < FIRST_DB_AGE_SEASON]
+        # only add stray old-style bands. Exception: weeks where dportal gives
+        # 0 for every age band while the national rate is above 0 (2019 W17).
+        # The bulletins replace those weeks.
+        db_by_age = db["age_group"] != "all"
+        week_sum = (
+            db[db_by_age & (db["region_code"] == "00")]
+            .groupby(["year", "week"])["value"]
+            .sum()
+        )
+        empty = {yw for yw, s in week_sum.items() if s == 0 and national.get(yw, 0) > 0}
+        db_empty = [(y, w) in empty for y, w in zip(db["year"], db["week"])]
+        frames[0] = db[~(db_by_age & pd.Series(db_empty, index=db.index))]
+        refill = pd.Series(
+            [(y, w) in empty for y, w in zip(ages["year"], ages["week"])],
+            index=ages.index,
+        )
+        ages = ages[(ages["season"] < FIRST_DB_AGE_SEASON) | refill]
+        print(f"dportal age weeks replaced by bulletins: {sorted(empty)}")
         frames.append(ages)
 
         threshold = b[b["indicator"] == "ili_epidemic_threshold"]

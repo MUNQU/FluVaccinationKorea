@@ -320,18 +320,52 @@ def hospital(text: str, report: tuple[int, int]):
                 int(m.group(1)),
                 int(m.group(2).replace(",", "")),
             )
+    yield from sari(flat, report)
+
+
+def sari(flat: str, report: tuple[int, int]):
+    """(indicator, week, value) of the SARI sentinel, from whitespace-flat text."""
     for m in re.finditer(
-        r"(?:(\d{1,2})\s*주차?\s*)?중증급성호흡기감염[병증]\s*\(SARI\)\s*신규\s*환자는\s*([\d,]+)\s*명\s*\(\s*인플루엔자\s*([\d,]+)\s*명",
+        r"(?:(\d{1,2})\s*주차?\s*)?중증급성호흡기감염[병증]\s*\(S\s*ARI\)\s*신규\s*환자는\s*([\d,]+)\s*명\s*\(\s*인플루엔자\s*([\d,]+)\s*명",
         flat,
     ):
         week = int(m.group(1) or report[1])
         yield "sari_new_patients", week, int(m.group(2).replace(",", ""))
         yield "sari_flu_positive", week, int(m.group(3).replace(",", ""))
     for m in re.finditer(
-        r"(\d{1,2})\s*주\s*신규\s*SARI\s*환자\s*중\s*인플루엔자\s*검사건은\s*([\d,]+)\s*건,?\s*양성은\s*([\d,]+)\s*건",
+        r"(\d{1,2})\s*주\s*신규\s*SARI\s*환자\s*중\s*인플루엔자\s*검사\s*건은\s*([\d,]+)\s*건,?\s*양성은\s*([\d,]+)\s*건",
         flat,
     ):
         yield "sari_flu_positive", int(m.group(1)), int(m.group(3).replace(",", ""))
+    # 2022-2023: "3주차 신규 SARI환자는 210명이며, 이 중 인플루엔자 환자는 18명".
+    for m in re.finditer(
+        r"(\d{1,2})\s*주차?\s*신규\s*SARI\s*환자는\s*([\d,]+)\s*명이며,?\s*"
+        r"이\s*중\s*인플루엔자\s*환자는\s*([\d,]+)\s*명",
+        flat,
+    ):
+        week = int(m.group(1))
+        yield "sari_new_patients", week, int(m.group(2).replace(",", ""))
+        yield "sari_flu_positive", week, int(m.group(3).replace(",", ""))
+    # From mid-2023: a 10-week table "구분 1주 2주 ... 신규 SARI 환자 수 390 365 ...".
+    # The header can carry a year ("24년 1주"), and from 2025 single characters
+    # of a vertical side label fall between the header and the row.
+    m = re.search(
+        r"구분\s*((?:(?:\d{2}년\s*)?\d{1,2}\s*주\s*)+)(?:[^\d\s]\s+){0,3}"
+        r"신규\s*SARI\s*환자\s*수\s*((?:[\d,]+\s*)+)",
+        flat,
+    )
+    if m:
+        weeks = [int(w) for w in re.findall(r"(\d{1,2})\s*주", m.group(1))]
+        values = [int(v.replace(",", "")) for v in m.group(2).split()]
+        if len(weeks) == len(values):
+            for week, value in zip(weeks, values):
+                yield "sari_new_patients", week, value
+    # Same period, sentence form for the report week only.
+    m = re.search(
+        r"신규\s*중증급성호흡기감염증\s*\(SARI\)\s*입원환자는\s*([\d,]+)\s*명", flat
+    )
+    if m:
+        yield "sari_new_patients", report[1], int(m.group(1).replace(",", ""))
 
 
 def hospital_table(path: Path, report: tuple[int, int]):

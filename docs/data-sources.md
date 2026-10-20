@@ -81,5 +81,8 @@ other raw and processed data take about 65 MB.
   `common.REGIONS`. The script skips it. This affects only the provincial ILI of 2026-2027.
 - The fieldwork dates of the Community Health Survey (16 Aug – 31 Oct) and the definition of
   the denominator follow the usual survey design. No official document confirms them yet.
-- The hospital, SARI and virus series of the bulletins come from text patterns. They were
-  checked for continuity only. No second source is available to compare them.
+- The hospital and virus series of the bulletins come from text patterns. They were
+  checked for continuity only. ILI, SARI new patients and influenza positivity were
+  checked against an independent build by another researcher (`drafts/data/`): see
+  "Cross-check with an independent dataset" in
+  [kdca_sentinel.md](sources/kdca_sentinel.md).

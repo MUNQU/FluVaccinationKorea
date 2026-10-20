@@ -84,7 +84,7 @@ kdca_sentinel,ili_per_1000,per_1000,week,2019-03-24,2019-03-30,2019,13,2018-2019
 kdca_sentinel,ili_per_1000,per_1000,week,2019-03-31,2019-04-06,2019,14,2018-2019,00,Korea,0,all,all,10.5
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-07,2019-04-13,2019,15,2018-2019,00,Korea,0,all,all,13.4
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-14,2019-04-20,2019,16,2018-2019,00,Korea,0,all,all,14.7
-kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,0,all,all,0.0
+kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,0,all,all,18.4
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-28,2019-05-04,2019,18,2018-2019,00,Korea,0,all,all,16.7
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-05,2019-05-11,2019,19,2018-2019,00,Korea,0,all,all,8.7
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-12,2019-05-18,2019,20,2018-2019,00,Korea,0,all,all,8.8
@@ -768,7 +768,7 @@ kdca_sentinel,ili_per_1000,per_1000,week,2019-03-24,2019-03-30,2019,13,2018-2019
 kdca_sentinel,ili_per_1000,per_1000,week,2019-03-31,2019-04-06,2019,14,2018-2019,00,Korea,1-6,all,all,37.6
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-07,2019-04-13,2019,15,2018-2019,00,Korea,1-6,all,all,50.4
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-14,2019-04-20,2019,16,2018-2019,00,Korea,1-6,all,all,57.6
-kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,1-6,all,all,0.0
+kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,1-6,all,all,50.8
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-28,2019-05-04,2019,18,2018-2019,00,Korea,1-6,all,all,34.9
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-05,2019-05-11,2019,19,2018-2019,00,Korea,1-6,all,all,21.6
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-12,2019-05-18,2019,20,2018-2019,00,Korea,1-6,all,all,18.1
@@ -1243,7 +1243,7 @@ kdca_sentinel,ili_per_1000,per_1000,week,2019-03-24,2019-03-30,2019,13,2018-2019
 kdca_sentinel,ili_per_1000,per_1000,week,2019-03-31,2019-04-06,2019,14,2018-2019,00,Korea,13-18,all,all,90.0
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-07,2019-04-13,2019,15,2018-2019,00,Korea,13-18,all,all,88.3
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-14,2019-04-20,2019,16,2018-2019,00,Korea,13-18,all,all,87.9
-kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,13-18,all,all,0.0
+kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,13-18,all,all,60.7
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-28,2019-05-04,2019,18,2018-2019,00,Korea,13-18,all,all,47.2
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-05,2019-05-11,2019,19,2018-2019,00,Korea,13-18,all,all,21.9
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-12,2019-05-18,2019,20,2018-2019,00,Korea,13-18,all,all,17.0
@@ -1927,7 +1927,7 @@ kdca_sentinel,ili_per_1000,per_1000,week,2019-03-24,2019-03-30,2019,13,2018-2019
 kdca_sentinel,ili_per_1000,per_1000,week,2019-03-31,2019-04-06,2019,14,2018-2019,00,Korea,19-49,all,all,25.5
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-07,2019-04-13,2019,15,2018-2019,00,Korea,19-49,all,all,33.1
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-14,2019-04-20,2019,16,2018-2019,00,Korea,19-49,all,all,32.6
-kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,19-49,all,all,0.0
+kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,19-49,all,all,29.5
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-28,2019-05-04,2019,18,2018-2019,00,Korea,19-49,all,all,19.6
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-05,2019-05-11,2019,19,2018-2019,00,Korea,19-49,all,all,13.7
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-12,2019-05-18,2019,20,2018-2019,00,Korea,19-49,all,all,8.5
@@ -2611,7 +2611,7 @@ kdca_sentinel,ili_per_1000,per_1000,week,2019-03-24,2019-03-30,2019,13,2018-2019
 kdca_sentinel,ili_per_1000,per_1000,week,2019-03-31,2019-04-06,2019,14,2018-2019,00,Korea,50-64,all,all,7.9
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-07,2019-04-13,2019,15,2018-2019,00,Korea,50-64,all,all,9.8
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-14,2019-04-20,2019,16,2018-2019,00,Korea,50-64,all,all,11.4
-kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,50-64,all,all,0.0
+kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,50-64,all,all,11.5
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-28,2019-05-04,2019,18,2018-2019,00,Korea,50-64,all,all,6.9
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-05,2019-05-11,2019,19,2018-2019,00,Korea,50-64,all,all,5.3
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-12,2019-05-18,2019,20,2018-2019,00,Korea,50-64,all,all,4.9
@@ -3295,7 +3295,7 @@ kdca_sentinel,ili_per_1000,per_1000,week,2019-03-24,2019-03-30,2019,13,2018-2019
 kdca_sentinel,ili_per_1000,per_1000,week,2019-03-31,2019-04-06,2019,14,2018-2019,00,Korea,65+,all,all,4.1
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-07,2019-04-13,2019,15,2018-2019,00,Korea,65+,all,all,3.8
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-14,2019-04-20,2019,16,2018-2019,00,Korea,65+,all,all,5.3
-kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,65+,all,all,0.0
+kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,65+,all,all,5.8
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-28,2019-05-04,2019,18,2018-2019,00,Korea,65+,all,all,2.5
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-05,2019-05-11,2019,19,2018-2019,00,Korea,65+,all,all,1.6
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-12,2019-05-18,2019,20,2018-2019,00,Korea,65+,all,all,2.1
@@ -3770,7 +3770,7 @@ kdca_sentinel,ili_per_1000,per_1000,week,2019-03-24,2019-03-30,2019,13,2018-2019
 kdca_sentinel,ili_per_1000,per_1000,week,2019-03-31,2019-04-06,2019,14,2018-2019,00,Korea,7-12,all,all,86.6
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-07,2019-04-13,2019,15,2018-2019,00,Korea,7-12,all,all,127.5
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-14,2019-04-20,2019,16,2018-2019,00,Korea,7-12,all,all,123.4
-kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,7-12,all,all,0.0
+kdca_sentinel,ili_per_1000,per_1000,week,2019-04-21,2019-04-27,2019,17,2018-2019,00,Korea,7-12,all,all,103.9
 kdca_sentinel,ili_per_1000,per_1000,week,2019-04-28,2019-05-04,2019,18,2018-2019,00,Korea,7-12,all,all,56.8
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-05,2019-05-11,2019,19,2018-2019,00,Korea,7-12,all,all,34.4
 kdca_sentinel,ili_per_1000,per_1000,week,2019-05-12,2019-05-18,2019,20,2018-2019,00,Korea,7-12,all,all,25.0

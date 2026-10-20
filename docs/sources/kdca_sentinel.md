@@ -63,8 +63,8 @@ are the Sunday that starts the week.
 | `kdca_sentinel_ili` · `ili_per_1000` | 15 provinces | 2026-08-30 | 2026-10-04 | portal |
 | `kdca_sentinel_threshold` · `ili_epidemic_threshold` | by season | 2007-2008 | 2026-2027 | bulletins (2010-2011 missing) |
 | `kdca_sentinel_hospital` · `hosp_flu_inpatients` | total | 2017-06-11 | 2026-10-04 | bulletins |
-| `kdca_sentinel_hospital` · `sari_new_patients` | total | 2019-02-03 | 2023-06-04 | bulletins, with gaps |
-| `kdca_sentinel_hospital` · `sari_flu_positive` | total | 2019-02-03 | 2026-01-25 | bulletins, with gaps |
+| `kdca_sentinel_hospital` · `sari_new_patients` | total | 2019-02-03 | 2026-10-04 | bulletins; every week from 2020 W20 |
+| `kdca_sentinel_hospital` · `sari_flu_positive` | total | 2019-02-03 | 2026-10-04 | bulletins; no data from 2023 W24 to 2025 W29 |
 | `kdca_sentinel_virus` · `flu_specimens_tested`, `flu_specimens_positive` | total | 2008-01-06 | 2020-11-22 | bulletins, with gaps |
 | `kdca_sentinel_virus` · `flu_positivity` (%) | total | 2008-01-06 | 2026-10-04 | bulletins, with gaps |
 
@@ -174,11 +174,45 @@ publishes.
   some January-February weeks before 2013 (for example 2008 W4-W9). The all-season query
   has those values. The script uses the all-season query for the national series and
   treats a national 0.0 as missing (before 2003-2004 all values are zero).
+- **Empty portal weeks:** in 2019 W17 the portal gives 0.0 for every age group, while the
+  national rate is 37.3. The bulletins give the real values (for example 18.4 for age 0).
+  The script replaces any portal week where all age groups are 0 and the national rate is
+  above 0 with the bulletin values. Only 2019 W17 is affected. The other zeros by age
+  (2020-2022) are real: the bulletins also give 0.0.
 - **Revisions:** when several bulletins give the same week, the script uses the most
   recent bulletin.
 - **Provinces (2026-2027):** the portal gives 17 regions. Codes "05" (Gwangju) and "13"
   (Jeonnam) are no longer in use and have only zeros. Code "18" (merged Jeonnam-Gwangju)
   has no code in `common.REGIONS`, and the script skips it.
+
+## Cross-check with an independent dataset
+
+Another researcher built the same series independently from the same bulletins and from
+WHO FluNet (`drafts/data/`, see `drafts/DICTIONARY.md`). The two builds were compared on
+`week_start_date` (2026-10-20, script `scripts/check_drafts_data.py`):
+
+| Series | Values compared | Equal | Notes |
+|---|---|---|---|
+| ILI per 1,000 (national and by age) | 5,307 | 5,101 (96.1%) | See below |
+| Influenza positivity, total / A / B (FluNet and bulletins) | 1,965 | 1,965 (100%) | — |
+| SARI new patients | 335 | 328 (97.9%) | The 7 differences (2026) are revisions: the other build keeps the first report, this build keeps the latest |
+
+Both builds use the same week rule (week 1 contains 1 January). The 206 ILI differences
+were checked against the bulletin text:
+
+| Cause | Values | Correct series |
+|---|---|---|
+| Age columns shifted by one position in the other build (2024 W31-W39) | 71 | This build (bulletins confirm) |
+| Small differences (≤ 0.6): first report versus revised value, or rounding | 66 | This build keeps the revised value |
+| One-week shift in the other build at the start of 2010, 2012 and 2013 (W1-W10) | 29 | This build (bulletin sentences, for example "2012년도 제2주 … 11.3명") |
+| First report versus later reports (2020 W1, 2022 W47, others) | 27 | This build (later bulletins confirm) |
+| Week values copied into the next week in the other build (2020 W49) | 8 | This build |
+| 2013 W36-W39: old system (bulletins at the time) versus new system (portal) | 4 | Both are correct for their system. This build is consistent with the new system |
+| 2020 W47, age 19-49: bulletin 0.3 versus portal 5.3 | 1 | Unresolved |
+
+The comparison also found two problems in this build, now fixed: the empty portal week
+2019 W17 (see the merge rules) and SARI new patients missing after 2023 W23 (new table
+layouts in the bulletins).
 
 ## Files
 
@@ -201,6 +235,10 @@ publishes.
 - The hospital, SARI and virus indicators come from the bulletin text. Their coverage has
   gaps (see the coverage table). For viruses, the laboratory source (`kdca_lab`) is
   better.
+- `sari_flu_positive` has no data from 2023 W24 to 2025 W29: the bulletins of that period
+  give the influenza share of SARI in another form, which the script does not read yet.
+- One value is unresolved: 2020 W47, age 19-49. The bulletins give 0.3 and the portal
+  gives 5.3. The file keeps the portal value.
 - The script downloads the season reports (2001-2002 to 2012-2013) but does not process
   them: their age data are only in figures.
 
