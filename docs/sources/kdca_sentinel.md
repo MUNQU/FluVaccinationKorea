@@ -187,26 +187,28 @@ publishes.
 
 ## Cross-check with an independent dataset
 
-Another researcher built the same series independently from the same bulletins and from
-WHO FluNet (`drafts/data/`, see `drafts/DICTIONARY.md`). The two builds were compared on
+Dr. Woo-Sik Son ([woosikson](https://github.com/woosikson)) built the same series
+independently from the same bulletins and from WHO FluNet, and shared the files in
+`drafts/data/` (codebook in Korean: `drafts/DICTIONARY.md`). We thank Dr. Son for the data.
+In the tables below, "Son build" refers to those files. The two builds were compared on
 `week_start_date` (2026-10-20, script `scripts/check_drafts_data.py`):
 
 | Series | Values compared | Equal | Notes |
 |---|---|---|---|
 | ILI per 1,000 (national and by age) | 5,307 | 5,101 (96.1%) | See below |
 | Influenza positivity, total / A / B (FluNet and bulletins) | 1,965 | 1,965 (100%) | — |
-| SARI new patients | 335 | 328 (97.9%) | The 7 differences (2026) are revisions: the other build keeps the first report, this build keeps the latest |
+| SARI new patients | 335 | 328 (97.9%) | The 7 differences (2026) are revisions: the Son build keeps the first report, this build keeps the latest |
 
 Both builds use the same week rule (week 1 contains 1 January). The 206 ILI differences
 were checked against the bulletin text:
 
 | Cause | Values | Correct series |
 |---|---|---|
-| Age columns shifted by one position in the other build (2024 W31-W39) | 71 | This build (bulletins confirm) |
+| Age columns shifted by one position in the Son build (2024 W31-W39) | 71 | This build (bulletins confirm) |
 | Small differences (≤ 0.6): first report versus revised value, or rounding | 66 | This build keeps the revised value |
-| One-week shift in the other build at the start of 2010, 2012 and 2013 (W1-W10) | 29 | This build (bulletin sentences, for example "2012년도 제2주 … 11.3명") |
+| One-week shift in the Son build at the start of 2010, 2012 and 2013 (W1-W10) | 29 | This build (bulletin sentences, for example "2012년도 제2주 … 11.3명") |
 | First report versus later reports (2020 W1, 2022 W47, others) | 27 | This build (later bulletins confirm) |
-| Week values copied into the next week in the other build (2020 W49) | 8 | This build |
+| Week values copied into the next week in the Son build (2020 W49) | 8 | This build |
 | 2013 W36-W39: old system (bulletins at the time) versus new system (portal) | 4 | Both are correct for their system. This build is consistent with the new system |
 | 2020 W47, age 19-49: bulletin 0.3 versus portal 5.3 | 1 | Unresolved |
 

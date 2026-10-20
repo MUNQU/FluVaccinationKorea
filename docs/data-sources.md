@@ -83,6 +83,6 @@ other raw and processed data take about 65 MB.
   the denominator follow the usual survey design. No official document confirms them yet.
 - The hospital and virus series of the bulletins come from text patterns. They were
   checked for continuity only. ILI, SARI new patients and influenza positivity were
-  checked against an independent build by another researcher (`drafts/data/`): see
+  checked against an independent build by Dr. Woo-Sik Son (`drafts/data/`): see
   "Cross-check with an independent dataset" in
   [kdca_sentinel.md](sources/kdca_sentinel.md).

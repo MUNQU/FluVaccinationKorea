@@ -1,4 +1,4 @@
-"""Compare drafts/data (independent build by another researcher) with data/processed.
+"""Compare drafts/data (independent build by Dr. Woo-Sik Son) with data/processed.
 
 Joins on the week start date and prints, per series, how many values agree and
 which differ. See docs/sources/kdca_sentinel.md, "Cross-check with an
