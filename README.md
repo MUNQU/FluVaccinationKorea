@@ -5,6 +5,7 @@ to repeat the analysis of `FluVaccinationLoRegne` (Valencian Community, Spain) w
 data and to compare the results.
 
 - Sources and coverage: [docs/data-sources.md](docs/data-sources.md)
+- Inputs of the first model (2016-2017, 65+): [docs/model-inputs.md](docs/model-inputs.md)
 - File format: [docs/data-format.md](docs/data-format.md)
 - One page per source: [docs/sources/](docs/sources/)
 

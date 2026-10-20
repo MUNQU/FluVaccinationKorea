@@ -13,6 +13,7 @@ file format is in [data-format.md](data-format.md).
 | **WHO FluNet** (the Power BI link) | Specimens tested and influenza detections by subtype and lineage, RSV | Weekly | National only | 2009 W21 to 2026, gap 2020 W6-W35 | `kdca_lab_flunet.csv` | [kdca_lab.md](sources/kdca_lab.md) |
 | **MOIS** (jumin.mois.go.kr) | Registered population on 31 December | Yearly | Single year of age, sex, province | 2008 to 2025 | `mois_population.csv` | [mois.md](sources/mois.md) |
 | **KOSIS** DT_INFLUENZA | % of adults (19+) who report a flu vaccination in the last year. Community Health Survey | Yearly | Province and district (si-gun-gu). No age or sex | 2008 to 2025 | `kosis_vaccination.csv` | [kosis_vaccination.md](sources/kosis_vaccination.md) |
+| **KDCA NIP registry** (data.go.kr 15142108) and KCDC press release | Persons vaccinated under the National Immunization Program, target population and coverage (65+, children, pregnant women); persons aged 65+ vaccinated per week in October 2016 | Season; weekly for Oct 2016 | Sex, provider, province, district | 2015-16 to 2023-24 | `nip_coverage.csv`, `nip_weekly_2016.csv` | [nip_vaccination.md](sources/nip_vaccination.md) |
 | **GitHub** `woosikson/age-rt-smoother` | 6×6 contact matrices (Son 2025 survey, Prem 2017 and 2021) | — | The 6 NHIS age bands | — | `contact_matrices.csv` | [contact_matrices.md](sources/contact_matrices.md) |
 
 ## Key findings
@@ -41,7 +42,7 @@ file format is in [data-format.md](data-format.md).
 |---|---|---|
 | Weekly admissions, age ≥60, by vaccination × comorbidity | NHIS inpatient sheet, 65+, weekly | Cut at 65, not 60. No vaccination status, no comorbidity. Clinical diagnosis, not laboratory-confirmed |
 | Admissions (second source) | KDCA hospital ARI network | **Starts in 2017 W24.** Does not cover 2016-2017 |
-| Weekly doses, age ≥60 | KOSIS: yearly adult coverage by province | These sources have no weekly doses and no 65+ coverage |
+| Weekly doses, age ≥60 | NIP registry: final 65+ coverage 82.8%. Press release: 65+ vaccinated per week, W41-W44 2016 (78.9% by 27 Oct) | Cut at 65. No weekly data after 27 Oct (the last 4.0% must be spread by assumption). No split by comorbidity |
 | Population ≥60, and share with ≥2 chronic conditions | MOIS: population by single year of age (31-12-2016) | No comorbidity data |
 | — | Sentinel ILI by age (5 bands), FluNet by subtype | Extra data that LoRegne does not use: epidemic shape and dominant subtype (A(H3)) |
 
@@ -59,6 +60,7 @@ ln -sfn $HOME/.virtualenvs/FluVaccinationKorea .venv
 .venv/bin/python -E -s scripts/contact_matrices.py
 .venv/bin/python -E -s scripts/kdca_lab.py
 .venv/bin/python -E -s scripts/kosis_vaccination.py
+.venv/bin/python -E -s scripts/nip_vaccination.py
 .venv/bin/python -E -s scripts/kdca_sentinel_download.py db         # ~10 min
 .venv/bin/python -E -s scripts/kdca_sentinel_download.py bulletins  # ~1 h, ~2.7 GB
 .venv/bin/python -E -s scripts/kdca_sentinel_bulletins.py

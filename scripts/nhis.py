@@ -10,12 +10,11 @@ from datetime import timedelta
 from pathlib import Path
 
 import pandas as pd
-import requests
 
+import datagokr
 from common import RAW, REGIONS, epi_week, epi_week_start, season_of, write_tidy
 
 DATASET = "15089429"
-PORTAL = "https://www.data.go.kr"
 RAW_DIR = RAW / "nhis"
 
 SHEETS = {
@@ -31,36 +30,6 @@ AGES = {
     "5. 45-64세": "45-64",
     "6. 65세 이상": "65+",
 }
-
-
-def download() -> Path:
-    """Download the current release of the workbook, named by its cut-off date."""
-    page = requests.get(f"{PORTAL}/data/{DATASET}/fileData.do", timeout=60).text
-    detail_pk = page.split('name="publicDataDetailPk" value="')[1].split('"')[0]
-    info = requests.post(
-        f"{PORTAL}/tcs/dss/selectFileDataDownload.do",
-        data={
-            "publicDataDetailPk": detail_pk,
-            "publicDataPk": DATASET,
-            "atchFileId": "",
-            "fileDetailSn": "1",
-            "publicDataTyCode": "PR0051",
-        },
-        timeout=60,
-    ).json()
-    cutoff = info["dataSetFileDetailInfo"]["dataNm"].rsplit("_", 1)[1]
-    path = RAW_DIR / f"nhis_influenza_{cutoff}.xlsx"
-    if path.exists():
-        return path
-    RAW_DIR.mkdir(parents=True, exist_ok=True)
-    response = requests.get(
-        f"{PORTAL}/cmm/cmm/fileDownload.do",
-        params={"atchFileId": info["atchFileId"], "fileDetailSn": info["fileDetailSn"]},
-        timeout=600,
-    )
-    response.raise_for_status()
-    path.write_bytes(response.content)
-    return path
 
 
 def read(path: Path) -> pd.DataFrame:
@@ -145,7 +114,7 @@ def _finish(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main() -> None:
-    path = download()
+    path = datagokr.download(DATASET, RAW_DIR, "nhis_influenza")
     df = read(path)
     print(f"{path.name}: {len(df)} rows, {df['date'].min()} to {df['date'].max()}")
     print(df.groupby("category")["value"].sum().to_string())

@@ -1,0 +1,9 @@
+source,indicator,unit,period_type,date_start,date_end,year,week,season,region_code,region_name,age_group,sex,category,value
+kcdc_press,vaccinated,persons,week,2016-10-04,2016-10-08,2016,41,2016-2017,00,Korea,65+,all,target=65+;denominator=6936921,2263357.0
+kcdc_press,coverage_increment_pct,percent,week,2016-10-04,2016-10-08,2016,41,2016-2017,00,Korea,65+,all,target=65+;denominator=6936921,32.63
+kcdc_press,vaccinated,persons,week,2016-10-09,2016-10-15,2016,42,2016-2017,00,Korea,65+,all,target=65+;denominator=6936921,2565769.0
+kcdc_press,coverage_increment_pct,percent,week,2016-10-09,2016-10-15,2016,42,2016-2017,00,Korea,65+,all,target=65+;denominator=6936921,36.99
+kcdc_press,vaccinated,persons,week,2016-10-16,2016-10-22,2016,43,2016-2017,00,Korea,65+,all,target=65+;denominator=6936921,485686.0
+kcdc_press,coverage_increment_pct,percent,week,2016-10-16,2016-10-22,2016,43,2016-2017,00,Korea,65+,all,target=65+;denominator=6936921,7.0
+kcdc_press,vaccinated,persons,week,2016-10-23,2016-10-27,2016,44,2016-2017,00,Korea,65+,all,target=65+;denominator=6936921,158675.0
+kcdc_press,coverage_increment_pct,percent,week,2016-10-23,2016-10-27,2016,44,2016-2017,00,Korea,65+,all,target=65+;denominator=6936921,2.29
