@@ -1,0 +1,118 @@
+{
+  "parameters": {
+    "beta": {
+      "value": 0.06020540853344238,
+      "calibrated": true
+    },
+    "t_latency": {
+      "value": 0.06020515589059949,
+      "calibrated": true
+    },
+    "t_recovery": {
+      "value": 0.01957102127812656,
+      "calibrated": true
+    },
+    "t_hospitalization_nv": {
+      "value": 0.004593996950137595,
+      "calibrated": true
+    },
+    "t_hospitalization_v": {
+      "value": 0.004850261712541064,
+      "calibrated": true
+    },
+    "t_hospitalization_recovery_nv": {
+      "value": 0.005499334903131865,
+      "calibrated": true
+    },
+    "t_hospitalization_recovery_v": {
+      "value": 0.004753966450071832,
+      "calibrated": true
+    },
+    "p_h_y": {
+      "value": 0.010924568653690256,
+      "calibrated": true
+    },
+    "p_h_nv": {
+      "value": 0.011590378388279818,
+      "calibrated": true
+    },
+    "births": {
+      "value": 44.90919461556012,
+      "calibrated": false
+    },
+    "aging": {
+      "value": 1.0895830864930038e-06,
+      "calibrated": false
+    },
+    "death_y65": {
+      "value": 5.215858694248654e-08,
+      "calibrated": false
+    },
+    "death_o65": {
+      "value": 3.365996840809016e-06,
+      "calibrated": false
+    },
+    "ve": {
+      "value": 0.2,
+      "calibrated": false
+    }
+  },
+  "initial_amounts": {
+    "S": {
+      "amount": 22771179.752800457,
+      "unit": null,
+      "calibrated": true
+    },
+    "E": {
+      "amount": 0.5169621600000001,
+      "unit": null,
+      "calibrated": true
+    },
+    "IR": {
+      "amount": 0.5169621600000001,
+      "unit": null,
+      "calibrated": true
+    },
+    "IH": {
+      "amount": 0.5169621600000001,
+      "unit": null,
+      "calibrated": true
+    },
+    "H": {
+      "amount": 0.0,
+      "unit": null,
+      "calibrated": false
+    },
+    "R": {
+      "amount": 28925034.696313076,
+      "unit": null,
+      "calibrated": false
+    }
+  },
+  "category_splits": {
+    "y65": {
+      "group": [],
+      "fraction": 0.8646776777627205,
+      "calibrated": false
+    },
+    "o65": {
+      "group": [],
+      "fraction": 0.1353223222372794,
+      "calibrated": false
+    },
+    "nv": {
+      "group": [
+        "o65"
+      ],
+      "fraction": 1.0,
+      "calibrated": false
+    },
+    "v": {
+      "group": [
+        "o65"
+      ],
+      "fraction": 0.0,
+      "calibrated": false
+    }
+  }
+}

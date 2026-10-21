@@ -1,0 +1,43 @@
+{
+  "season": "2016-2017",
+  "first_week": "2016-36",
+  "week_rule": "KDCA: Sunday to Saturday, week 1 contains 1 January",
+  "population": {
+    "date": "2016-12-31",
+    "population_under_65": 44700564,
+    "population_65plus": 6995652,
+    "births_per_week": 7544.7446954141,
+    "aging_weekly_probability": 0.00018303330561525907,
+    "death_under_65_weekly_probability": 8.762604443018688e-06,
+    "death_65plus_weekly_probability": 0.0005653285625295603,
+    "derivation": {
+      "births_2016_proxy_age_0": 393674,
+      "aging_2016_age_64_on_2015_12_31": 426909,
+      "deaths_65plus_2016_residual": 206358,
+      "deaths_under_65_2016_residual": 20438,
+      "population_2015": {
+        "under_65": 44754237,
+        "65plus": 6775101
+      }
+    }
+  },
+  "vaccination": {
+    "registry_vaccinated_65plus": 5748445.0,
+    "registry_target_population_65plus": 6944490.0,
+    "press_release_vaccinated": 5473487.0,
+    "tail_after_27_oct": 274958.0,
+    "tail_weeks": [
+      "2016-45",
+      "2016-46",
+      "2016-47",
+      "2016-48"
+    ],
+    "tail_weights": [
+      8,
+      4,
+      2,
+      1
+    ]
+  },
+  "admissions": "NHIS inpatient episodes (ICD-10 J09-J11, primary or secondary diagnosis), by start date of the episode"
+}

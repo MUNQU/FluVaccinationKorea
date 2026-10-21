@@ -1,0 +1,266 @@
+SEIR-Korea
+==========
+
+Overview
+--------
+
+Field            Value
+---------------  -------------------
+Name             SEIR-Korea
+Version          1.0
+Kind             aggregate
+Engine           DifferenceEquations
+Engine settings  defaults
+Dynamics         difference equation
+Step unit        hour
+
+Entities and state variables
+----------------------------
+
+Bins
+~~~~
+Bin  Name                     Unit
+---  -----------------------  ----
+S    Susceptible
+E    Exposed
+IR   Infectious
+IH   Infected hospital-bound
+H    Hospitalized
+R    Recovered
+
+Accumulators
+~~~~~~~~~~~~
+Accumulator          Name
+-------------------  ------------------------------
+hospital_admissions  Cumulative hospital admissions
+infection_incidence  Cumulative infection incidence
+
+Stratifications
+~~~~~~~~~~~~~~~
+Stratification  Categories  Splits
+--------------  ----------  -----------------
+age             y65, o65    every compartment
+vaccination     nv, v       where age = o65
+
+Compartments
+~~~~~~~~~~~~
+Compartment  Bin  Categories
+-----------  ---  -----------------------
+S_y65        S    age=y65
+S_o65_nv     S    age=o65, vaccination=nv
+S_o65_v      S    age=o65, vaccination=v
+E_y65        E    age=y65
+E_o65_nv     E    age=o65, vaccination=nv
+E_o65_v      E    age=o65, vaccination=v
+IR_y65       IR   age=y65
+IR_o65_nv    IR   age=o65, vaccination=nv
+IR_o65_v     IR   age=o65, vaccination=v
+IH_y65       IH   age=y65
+IH_o65_nv    IH   age=o65, vaccination=nv
+IH_o65_v     IH   age=o65, vaccination=v
+H_y65        H    age=y65
+H_o65_nv     H    age=o65, vaccination=nv
+H_o65_v      H    age=o65, vaccination=v
+R_y65        R    age=y65
+R_o65_nv     R    age=o65, vaccination=nv
+R_o65_v      R    age=o65, vaccination=v
+
+Dynamics
+--------
+
+Compact form
+~~~~~~~~~~~~
+Bin Transitions:
+susceptble_to_latent (S -> E):
+  S_y65 -> E_y65: beta * S_y65 * (IR + IH) / total
+  S_o65_nv -> E_o65_nv: beta * S_o65_nv * (IR + IH) / total
+  S_o65_v -> E_o65_v: beta * S_o65_v * (IR + IH) / total
+
+exposed_to_infectious (E -> IR):
+  E_y65 -> IR_y65: (1 - p_h_y) * t_latency * E_y65
+  E_o65_nv -> IR_o65_nv: (1 - p_h_nv) * t_latency * E_o65_nv
+  E_o65_v -> IR_o65_v: (1 - p_h_v) * t_latency * E_o65_v
+
+exposed_to_hospital_bound_infectious (E -> IH):
+  E_y65 -> IH_y65: p_h_y * t_latency * E_y65
+  E_o65_nv -> IH_o65_nv: p_h_nv * t_latency * E_o65_nv
+  E_o65_v -> IH_o65_v: p_h_v * t_latency * E_o65_v
+
+infectious_to_recovered (IR -> R):
+  IR_y65 -> R_y65: t_recovery * IR_y65
+  IR_o65_nv -> R_o65_nv: t_recovery * IR_o65_nv
+  IR_o65_v -> R_o65_v: t_recovery * IR_o65_v
+
+hospital_bound_infectious_to_hospitalized (IH -> H):
+  IH_y65 -> H_y65: t_hospitalization_nv * IH_y65
+  IH_o65_nv -> H_o65_nv: t_hospitalization_nv * IH_o65_nv
+  IH_o65_v -> H_o65_v: t_hospitalization_v * IH_o65_v
+
+hospitalized_to_recovered (H -> R):
+  H_y65 -> R_y65: t_hospitalization_recovery_nv * H_y65
+  H_o65_nv -> R_o65_nv: t_hospitalization_recovery_nv * H_o65_nv
+  H_o65_v -> R_o65_v: t_hospitalization_recovery_v * H_o65_v
+
+vaccination_S (S -> S):
+  S_o65_nv -> S_o65_v: doses * S_o65_nv / (S_o65_nv + R_o65_nv)
+
+vaccination_R (R -> R):
+  R_o65_nv -> R_o65_v: doses * R_o65_nv / (S_o65_nv + R_o65_nv)
+
+births (none -> S):
+  none -> S_y65: births
+
+S_y65_to_S_o65 (S -> S):
+  S_y65 -> S_o65_nv: aging * S_y65
+
+E_y65_to_E_o65 (E -> E):
+  E_y65 -> E_o65_nv: aging * E_y65
+
+IR_y65_to_IR_o65 (IR -> IR):
+  IR_y65 -> IR_o65_nv: aging * IR_y65
+
+IH_y65_to_IH_o65 (IH -> IH):
+  IH_y65 -> IH_o65_nv: aging * IH_y65
+
+R_y65_to_R_o65 (R -> R):
+  R_y65 -> R_o65_nv: aging * R_y65
+
+S_death (S -> none):
+  S_y65 -> none: death_y65 * S_y65
+  S_o65_nv -> none: death_o65 * S_o65_nv
+  S_o65_v -> none: death_o65 * S_o65_v
+
+E_death (E -> none):
+  E_y65 -> none: death_y65 * E_y65
+  E_o65_nv -> none: death_o65 * E_o65_nv
+  E_o65_v -> none: death_o65 * E_o65_v
+
+IR_death (IR -> none):
+  IR_y65 -> none: death_y65 * IR_y65
+  IR_o65_nv -> none: death_o65 * IR_o65_nv
+  IR_o65_v -> none: death_o65 * IR_o65_v
+
+IH_death (IH -> none):
+  IH_y65 -> none: death_y65 * IH_y65
+  IH_o65_nv -> none: death_o65 * IH_o65_nv
+  IH_o65_v -> none: death_o65 * IH_o65_v
+
+H_death (H -> none):
+  H_y65 -> none: death_y65 * H_y65
+  H_o65_nv -> none: death_o65 * H_o65_nv
+  H_o65_v -> none: death_o65 * H_o65_v
+
+R_death (R -> none):
+  R_y65 -> none: death_y65 * R_y65
+  R_o65_nv -> none: death_o65 * R_o65_nv
+  R_o65_v -> none: death_o65 * R_o65_v
+
+Total System: 18 coupled equations (6 bins × 2 age × 2 vaccination)
+
+Expanded form
+~~~~~~~~~~~~~
+[S_y65(t+Dt) - S_y65(t)] / Dt = - (beta * S_y65 * (IR + IH) / total) + (births) - (aging * S_y65) - (death_y65 * S_y65)
+[S_o65_nv(t+Dt) - S_o65_nv(t)] / Dt = - (beta * S_o65_nv * (IR + IH) / total) - (doses * S_o65_nv / (S_o65_nv + R_o65_nv)) + (aging * S_y65) - (death_o65 * S_o65_nv)
+[S_o65_v(t+Dt) - S_o65_v(t)] / Dt = - (beta * S_o65_v * (IR + IH) / total) + (doses * S_o65_nv / (S_o65_nv + R_o65_nv)) - (death_o65 * S_o65_v)
+[E_y65(t+Dt) - E_y65(t)] / Dt = (beta * S_y65 * (IR + IH) / total) - (t_latency * E_y65) - (aging * E_y65) - (death_y65 * E_y65)
+[E_o65_nv(t+Dt) - E_o65_nv(t)] / Dt = (beta * S_o65_nv * (IR + IH) / total) - (t_latency * E_o65_nv) + (aging * E_y65) - (death_o65 * E_o65_nv)
+[E_o65_v(t+Dt) - E_o65_v(t)] / Dt = (beta * S_o65_v * (IR + IH) / total) - (t_latency * E_o65_v) - (death_o65 * E_o65_v)
+[IR_y65(t+Dt) - IR_y65(t)] / Dt = ((1 - p_h_y) * t_latency * E_y65) - (t_recovery * IR_y65) - (aging * IR_y65) - (death_y65 * IR_y65)
+[IR_o65_nv(t+Dt) - IR_o65_nv(t)] / Dt = ((1 - p_h_nv) * t_latency * E_o65_nv) - (t_recovery * IR_o65_nv) + (aging * IR_y65) - (death_o65 * IR_o65_nv)
+[IR_o65_v(t+Dt) - IR_o65_v(t)] / Dt = ((1 - p_h_v) * t_latency * E_o65_v) - (t_recovery * IR_o65_v) - (death_o65 * IR_o65_v)
+[IH_y65(t+Dt) - IH_y65(t)] / Dt = (p_h_y * t_latency * E_y65) - (t_hospitalization_nv * IH_y65) - (aging * IH_y65) - (death_y65 * IH_y65)
+[IH_o65_nv(t+Dt) - IH_o65_nv(t)] / Dt = (p_h_nv * t_latency * E_o65_nv) - (t_hospitalization_nv * IH_o65_nv) + (aging * IH_y65) - (death_o65 * IH_o65_nv)
+[IH_o65_v(t+Dt) - IH_o65_v(t)] / Dt = (p_h_v * t_latency * E_o65_v) - (t_hospitalization_v * IH_o65_v) - (death_o65 * IH_o65_v)
+[H_y65(t+Dt) - H_y65(t)] / Dt = (t_hospitalization_nv * IH_y65) - (t_hospitalization_recovery_nv * H_y65) - (death_y65 * H_y65)
+[H_o65_nv(t+Dt) - H_o65_nv(t)] / Dt = (t_hospitalization_nv * IH_o65_nv) - (t_hospitalization_recovery_nv * H_o65_nv) - (death_o65 * H_o65_nv)
+[H_o65_v(t+Dt) - H_o65_v(t)] / Dt = (t_hospitalization_v * IH_o65_v) - (t_hospitalization_recovery_v * H_o65_v) - (death_o65 * H_o65_v)
+[R_y65(t+Dt) - R_y65(t)] / Dt = (t_recovery * IR_y65) + (t_hospitalization_recovery_nv * H_y65) - (aging * R_y65) - (death_y65 * R_y65)
+[R_o65_nv(t+Dt) - R_o65_nv(t)] / Dt = (t_recovery * IR_o65_nv) + (t_hospitalization_recovery_nv * H_o65_nv) - (doses * R_o65_nv / (S_o65_nv + R_o65_nv)) + (aging * R_y65) - (death_o65 * R_o65_nv)
+[R_o65_v(t+Dt) - R_o65_v(t)] / Dt = (t_recovery * IR_o65_v) + (t_hospitalization_recovery_v * H_o65_v) + (doses * R_o65_nv / (S_o65_nv + R_o65_nv)) - (death_o65 * R_o65_v)
+
+Schedule
+--------
+
+Each step applies every flow once, computed from the state at the start of the step: X(n + 1) = X(n) + sum of the flows. The impulses of a step act first, and its flows run from the new state.
+
+Initialization
+--------------
+
+Bin amounts
+~~~~~~~~~~~
+Bin  Amount       Unit
+---  -----------  ----
+S    2.27712e+07
+E    0.516962
+IR   0.516962
+IH   0.516962
+H    0
+R    2.8925e+07
+
+Stratification fractions
+~~~~~~~~~~~~~~~~~~~~~~~~
+Stratification  Category  Fraction  Of
+--------------  --------  --------  --------
+age             y65       0.864678  each bin
+age             o65       0.135322  each bin
+vaccination     nv        1         o65
+vaccination     v         0         o65
+
+Initial state
+~~~~~~~~~~~~~
+Compartment  Amount       Unit
+-----------  -----------  ----
+S_y65        1.96897e+07
+S_o65_nv     3.08145e+06
+S_o65_v      0
+E_y65        0.447006
+E_o65_nv     0.0699565
+E_o65_v      0
+IR_y65       0.447006
+IR_o65_nv    0.0699565
+IR_o65_v     0
+IH_y65       0.447006
+IH_o65_nv    0.0699565
+IH_o65_v     0
+H_y65        0
+H_o65_nv     0
+H_o65_v      0
+R_y65        2.50108e+07
+R_o65_nv     3.9142e+06
+R_o65_v      0
+
+Parameters
+----------
+
+Parameter                      Value                        Unit  Set by calibration  Description
+-----------------------------  ---------------------------  ----  ------------------  -----------------------------------------------------------
+beta                           0.0602054                          no                  Transmission rate (S -> E)
+t_latency                      0.0602052                          no                  Latency time (E -> I)
+t_recovery                     0.019571                           no                  Recovery time (I -> R)
+t_hospitalization_nv           0.004594                           no                  Hospitalization time (I_nv -> H_nv)
+t_hospitalization_v            0.00485026                         no                  Hospitalization time vaccinated (I_v -> H_v)
+t_hospitalization_recovery_nv  0.00549933                         no                  Hospitalization recovery time non vaccinated (H_nv -> R_nv)
+t_hospitalization_recovery_v   0.00475397                         no                  Hospitalization recovery time vaccinated (H_v -> R_v)
+p_h_y                          0.0109246                          no                  Hospitalization percentage <65 (E_y65 -> IH_y65)
+p_h_nv                         0.0115904                          no                  Hospitalization percentage 65+ not vaccinated (E -> IH)
+births                         44.9092                            no                  Birth rate
+aging                          1.08958e-06                        no                  Aging rate (<65 -> 65+)
+death_y65                      5.21586e-08                        no                  Death rate younger 65
+death_o65                      3.366e-06                          no                  Death rate 65 and older
+ve                             0.2                                no                  Vaccine effectiveness against hospitalization
+p_h_v                          (1 - ve) * p_h_nv                  no                  Hospitalization percentage vaccinated 65+ (fixed by ve)
+doses                          series (pulse, 2912 points)        no                  Vaccine doses given to 65+ per step
+
+Outputs
+-------
+
+Source               Outputs
+-------------------  ------------------------------------------------------------------------------
+S                    S_y65, S_o65_nv, S_o65_v
+E                    E_y65, E_o65_nv, E_o65_v
+IR                   IR_y65, IR_o65_nv, IR_o65_v
+IH                   IH_y65, IH_o65_nv, IH_o65_v
+H                    H_y65, H_o65_nv, H_o65_v
+R                    R_y65, R_o65_nv, R_o65_v
+hospital_admissions  hospital_admissions_y65, hospital_admissions_o65_nv, hospital_admissions_o65_v
+infection_incidence  infection_incidence_y65, infection_incidence_o65_nv, infection_incidence_o65_v

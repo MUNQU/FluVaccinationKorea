@@ -1,0 +1,31 @@
+{
+  "kind": "calibration",
+  "csv_path": "/Users/david/munqu/FluVaccinationKorea/data/model/2016-2017.csv",
+  "seed": 12345,
+  "calibrated_against_reported_cases": false,
+  "calibration_last_week": "2017-10",
+  "vaccine_effectiveness": 0.2,
+  "commol": {
+    "version": "0.1.0",
+    "source": {
+      "url": "https://github.com/MUNQU/commol",
+      "vcs_info": {
+        "vcs": "git",
+        "commit_id": "af3b38dafea6bba46b76523fb45530c59929d6cd",
+        "requested_revision": "af3b38dafea6bba46b76523fb45530c59929d6cd"
+      },
+      "subdirectory": "py-commol"
+    }
+  },
+  "step_unit": "hour",
+  "steps_per_day": 24,
+  "steps_per_week": 168,
+  "simulation_weeks": 33,
+  "output_resolution": "weekly",
+  "calibration": {
+    "converged": false,
+    "iterations": 400,
+    "final_loss": 2.778080920058844,
+    "termination_reason": "Terminated(MaxItersReached)"
+  }
+}

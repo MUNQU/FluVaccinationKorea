@@ -14,6 +14,9 @@ dependencies = [
     "pdfplumber>=0.11",
     "playwright>=1.50",
     "pyhwp>=0.1b15",
+    # Same commit as FluVaccinationLoRegne uses (local main, 2026-10-20).
+    "commol @ git+https://github.com/MUNQU/commol@af3b38dafea6bba46b76523fb45530c59929d6cd#subdirectory=py-commol",
+    "matplotlib>=3.9",
     "requests>=2.32",
 ]
 
@@ -30,3 +33,7 @@ ignore = ["ERA001"]
 [tool.ruff.lint.per-file-ignores]
 # Embedded JavaScript for the headless browser.
 "scripts/kosis_vaccination.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

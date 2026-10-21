@@ -1,0 +1,21 @@
+{
+  "kind": "calibration",
+  "calibrated_against_reported_cases": false,
+  "confidence_level": null,
+  "point": {
+    "beta": 0.06020540853344238,
+    "t_latency": 0.06020515589059949,
+    "t_recovery": 0.01957102127812656,
+    "t_hospitalization_nv": 0.004593996950137595,
+    "t_hospitalization_v": 0.004850261712541064,
+    "t_hospitalization_recovery_nv": 0.005499334903131865,
+    "t_hospitalization_recovery_v": 0.004753966450071832,
+    "p_h_y": 0.010924568653690256,
+    "p_h_nv": 0.011590378388279818,
+    "S": 22771179.752800457,
+    "E": 0.5169621600000001,
+    "IR": 0.5169621600000001,
+    "IH": 0.5169621600000001
+  },
+  "members": []
+}

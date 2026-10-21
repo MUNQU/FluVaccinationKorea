@@ -1,0 +1,293 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage[margin=2cm]{geometry}
+\title{SEIR-Korea}
+\date{}
+\begin{document}
+\maketitle
+\section*{Overview}
+\begin{longtable}{p{0.45\linewidth}p{0.45\linewidth}}
+Field & Value \\
+\hline
+\endhead
+Name & SEIR-Korea \\
+Version & 1.0 \\
+Kind & aggregate \\
+Engine & DifferenceEquations \\
+Engine settings & defaults \\
+Dynamics & difference equation \\
+Step unit & hour \\
+\end{longtable}
+\section*{Entities and state variables}
+\subsection*{Bins}
+\begin{longtable}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+Bin & Name & Unit \\
+\hline
+\endhead
+S & Susceptible &  \\
+E & Exposed &  \\
+IR & Infectious &  \\
+IH & Infected hospital-bound &  \\
+H & Hospitalized &  \\
+R & Recovered &  \\
+\end{longtable}
+\subsection*{Accumulators}
+\begin{longtable}{p{0.45\linewidth}p{0.45\linewidth}}
+Accumulator & Name \\
+\hline
+\endhead
+hospital\_admissions & Cumulative hospital admissions \\
+infection\_incidence & Cumulative infection incidence \\
+\end{longtable}
+\subsection*{Stratifications}
+\begin{longtable}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+Stratification & Categories & Splits \\
+\hline
+\endhead
+age & y65, o65 & every compartment \\
+vaccination & nv, v & where age = o65 \\
+\end{longtable}
+\subsection*{Compartments}
+\begin{longtable}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+Compartment & Bin & Categories \\
+\hline
+\endhead
+S\_y65 & S & age=y65 \\
+S\_o65\_nv & S & age=o65, vaccination=nv \\
+S\_o65\_v & S & age=o65, vaccination=v \\
+E\_y65 & E & age=y65 \\
+E\_o65\_nv & E & age=o65, vaccination=nv \\
+E\_o65\_v & E & age=o65, vaccination=v \\
+IR\_y65 & IR & age=y65 \\
+IR\_o65\_nv & IR & age=o65, vaccination=nv \\
+IR\_o65\_v & IR & age=o65, vaccination=v \\
+IH\_y65 & IH & age=y65 \\
+IH\_o65\_nv & IH & age=o65, vaccination=nv \\
+IH\_o65\_v & IH & age=o65, vaccination=v \\
+H\_y65 & H & age=y65 \\
+H\_o65\_nv & H & age=o65, vaccination=nv \\
+H\_o65\_v & H & age=o65, vaccination=v \\
+R\_y65 & R & age=y65 \\
+R\_o65\_nv & R & age=o65, vaccination=nv \\
+R\_o65\_v & R & age=o65, vaccination=v \\
+\end{longtable}
+\section*{Dynamics}
+\subsection*{Compact form}
+\subsubsection*{Bin Transitions}
+\noindent\texttt{susceptble\_to\_latent (S -\textgreater{} E)}
+\begin{align*}
+S_{y65} \to E_{y65} &: \frac{\beta \cdot S_{y65} \cdot (IR + IH)}{total} \\
+S_{o65,nv} \to E_{o65,nv} &: \frac{\beta \cdot S_{o65,nv} \cdot (IR + IH)}{total} \\
+S_{o65,v} \to E_{o65,v} &: \frac{\beta \cdot S_{o65,v} \cdot (IR + IH)}{total}
+\end{align*}
+\noindent\texttt{exposed\_to\_infectious (E -\textgreater{} IR)}
+\begin{align*}
+E_{y65} \to IR_{y65} &: (1 - p_{h,y}) \cdot t_{latency} \cdot E_{y65} \\
+E_{o65,nv} \to IR_{o65,nv} &: (1 - p_{h,nv}) \cdot t_{latency} \cdot E_{o65,nv} \\
+E_{o65,v} \to IR_{o65,v} &: (1 - p_{h,v}) \cdot t_{latency} \cdot E_{o65,v}
+\end{align*}
+\noindent\texttt{exposed\_to\_hospital\_bound\_infectious (E -\textgreater{} IH)}
+\begin{align*}
+E_{y65} \to IH_{y65} &: p_{h,y} \cdot t_{latency} \cdot E_{y65} \\
+E_{o65,nv} \to IH_{o65,nv} &: p_{h,nv} \cdot t_{latency} \cdot E_{o65,nv} \\
+E_{o65,v} \to IH_{o65,v} &: p_{h,v} \cdot t_{latency} \cdot E_{o65,v}
+\end{align*}
+\noindent\texttt{infectious\_to\_recovered (IR -\textgreater{} R)}
+\begin{align*}
+IR_{y65} \to R_{y65} &: t_{recovery} \cdot IR_{y65} \\
+IR_{o65,nv} \to R_{o65,nv} &: t_{recovery} \cdot IR_{o65,nv} \\
+IR_{o65,v} \to R_{o65,v} &: t_{recovery} \cdot IR_{o65,v}
+\end{align*}
+\noindent\texttt{hospital\_bound\_infectious\_to\_hospitalized (IH -\textgreater{} H)}
+\begin{align*}
+IH_{y65} \to H_{y65} &: t_{hospitalization,nv} \cdot IH_{y65} \\
+IH_{o65,nv} \to H_{o65,nv} &: t_{hospitalization,nv} \cdot IH_{o65,nv} \\
+IH_{o65,v} \to H_{o65,v} &: t_{hospitalization,v} \cdot IH_{o65,v}
+\end{align*}
+\noindent\texttt{hospitalized\_to\_recovered (H -\textgreater{} R)}
+\begin{align*}
+H_{y65} \to R_{y65} &: t_{hospitalization,recovery,nv} \cdot H_{y65} \\
+H_{o65,nv} \to R_{o65,nv} &: t_{hospitalization,recovery,nv} \cdot H_{o65,nv} \\
+H_{o65,v} \to R_{o65,v} &: t_{hospitalization,recovery,v} \cdot H_{o65,v}
+\end{align*}
+\noindent\texttt{vaccination\_S (S -\textgreater{} S)}
+\begin{align*}
+S_{o65,nv} \to S_{o65,v} &: \frac{doses \cdot S_{o65,nv}}{S_{o65,nv} + R_{o65,nv}}
+\end{align*}
+\noindent\texttt{vaccination\_R (R -\textgreater{} R)}
+\begin{align*}
+R_{o65,nv} \to R_{o65,v} &: \frac{doses \cdot R_{o65,nv}}{S_{o65,nv} + R_{o65,nv}}
+\end{align*}
+\noindent\texttt{births (none -\textgreater{} S)}
+\begin{align*}
+\varnothing \to S_{y65} &: births
+\end{align*}
+\noindent\texttt{S\_y65\_to\_S\_o65 (S -\textgreater{} S)}
+\begin{align*}
+S_{y65} \to S_{o65,nv} &: aging \cdot S_{y65}
+\end{align*}
+\noindent\texttt{E\_y65\_to\_E\_o65 (E -\textgreater{} E)}
+\begin{align*}
+E_{y65} \to E_{o65,nv} &: aging \cdot E_{y65}
+\end{align*}
+\noindent\texttt{IR\_y65\_to\_IR\_o65 (IR -\textgreater{} IR)}
+\begin{align*}
+IR_{y65} \to IR_{o65,nv} &: aging \cdot IR_{y65}
+\end{align*}
+\noindent\texttt{IH\_y65\_to\_IH\_o65 (IH -\textgreater{} IH)}
+\begin{align*}
+IH_{y65} \to IH_{o65,nv} &: aging \cdot IH_{y65}
+\end{align*}
+\noindent\texttt{R\_y65\_to\_R\_o65 (R -\textgreater{} R)}
+\begin{align*}
+R_{y65} \to R_{o65,nv} &: aging \cdot R_{y65}
+\end{align*}
+\noindent\texttt{S\_death (S -\textgreater{} none)}
+\begin{align*}
+S_{y65} \to \varnothing &: death_{y65} \cdot S_{y65} \\
+S_{o65,nv} \to \varnothing &: death_{o65} \cdot S_{o65,nv} \\
+S_{o65,v} \to \varnothing &: death_{o65} \cdot S_{o65,v}
+\end{align*}
+\noindent\texttt{E\_death (E -\textgreater{} none)}
+\begin{align*}
+E_{y65} \to \varnothing &: death_{y65} \cdot E_{y65} \\
+E_{o65,nv} \to \varnothing &: death_{o65} \cdot E_{o65,nv} \\
+E_{o65,v} \to \varnothing &: death_{o65} \cdot E_{o65,v}
+\end{align*}
+\noindent\texttt{IR\_death (IR -\textgreater{} none)}
+\begin{align*}
+IR_{y65} \to \varnothing &: death_{y65} \cdot IR_{y65} \\
+IR_{o65,nv} \to \varnothing &: death_{o65} \cdot IR_{o65,nv} \\
+IR_{o65,v} \to \varnothing &: death_{o65} \cdot IR_{o65,v}
+\end{align*}
+\noindent\texttt{IH\_death (IH -\textgreater{} none)}
+\begin{align*}
+IH_{y65} \to \varnothing &: death_{y65} \cdot IH_{y65} \\
+IH_{o65,nv} \to \varnothing &: death_{o65} \cdot IH_{o65,nv} \\
+IH_{o65,v} \to \varnothing &: death_{o65} \cdot IH_{o65,v}
+\end{align*}
+\noindent\texttt{H\_death (H -\textgreater{} none)}
+\begin{align*}
+H_{y65} \to \varnothing &: death_{y65} \cdot H_{y65} \\
+H_{o65,nv} \to \varnothing &: death_{o65} \cdot H_{o65,nv} \\
+H_{o65,v} \to \varnothing &: death_{o65} \cdot H_{o65,v}
+\end{align*}
+\noindent\texttt{R\_death (R -\textgreater{} none)}
+\begin{align*}
+R_{y65} \to \varnothing &: death_{y65} \cdot R_{y65} \\
+R_{o65,nv} \to \varnothing &: death_{o65} \cdot R_{o65,nv} \\
+R_{o65,v} \to \varnothing &: death_{o65} \cdot R_{o65,v}
+\end{align*}
+Total System: 18 coupled equations (6 bins $\times$ 2 age $\times$ 2 vaccination)
+
+\subsection*{Expanded form}
+\begin{align*}
+\frac{S_{y65}(t+\Delta t) - S_{y65}(t)}{\Delta t} &= - (\frac{\beta \cdot S_{y65} \cdot (IR + IH)}{total}) + (births) - (aging \cdot S_{y65}) - (death_{y65} \cdot S_{y65}) \\
+\frac{S_{o65,nv}(t+\Delta t) - S_{o65,nv}(t)}{\Delta t} &= - (\frac{\beta \cdot S_{o65,nv} \cdot (IR + IH)}{total}) - (\frac{doses \cdot S_{o65,nv}}{S_{o65,nv} + R_{o65,nv}}) + (aging \cdot S_{y65}) - (death_{o65} \cdot S_{o65,nv}) \\
+\frac{S_{o65,v}(t+\Delta t) - S_{o65,v}(t)}{\Delta t} &= - (\frac{\beta \cdot S_{o65,v} \cdot (IR + IH)}{total}) + (\frac{doses \cdot S_{o65,nv}}{S_{o65,nv} + R_{o65,nv}}) - (death_{o65} \cdot S_{o65,v}) \\
+\frac{E_{y65}(t+\Delta t) - E_{y65}(t)}{\Delta t} &= (\frac{\beta \cdot S_{y65} \cdot (IR + IH)}{total}) - (t_{latency} \cdot E_{y65}) - (aging \cdot E_{y65}) - (death_{y65} \cdot E_{y65}) \\
+\frac{E_{o65,nv}(t+\Delta t) - E_{o65,nv}(t)}{\Delta t} &= (\frac{\beta \cdot S_{o65,nv} \cdot (IR + IH)}{total}) - (t_{latency} \cdot E_{o65,nv}) + (aging \cdot E_{y65}) - (death_{o65} \cdot E_{o65,nv}) \\
+\frac{E_{o65,v}(t+\Delta t) - E_{o65,v}(t)}{\Delta t} &= (\frac{\beta \cdot S_{o65,v} \cdot (IR + IH)}{total}) - (t_{latency} \cdot E_{o65,v}) - (death_{o65} \cdot E_{o65,v}) \\
+\frac{IR_{y65}(t+\Delta t) - IR_{y65}(t)}{\Delta t} &= ((1 - p_{h,y}) \cdot t_{latency} \cdot E_{y65}) - (t_{recovery} \cdot IR_{y65}) - (aging \cdot IR_{y65}) - (death_{y65} \cdot IR_{y65}) \\
+\frac{IR_{o65,nv}(t+\Delta t) - IR_{o65,nv}(t)}{\Delta t} &= ((1 - p_{h,nv}) \cdot t_{latency} \cdot E_{o65,nv}) - (t_{recovery} \cdot IR_{o65,nv}) + (aging \cdot IR_{y65}) - (death_{o65} \cdot IR_{o65,nv}) \\
+\frac{IR_{o65,v}(t+\Delta t) - IR_{o65,v}(t)}{\Delta t} &= ((1 - p_{h,v}) \cdot t_{latency} \cdot E_{o65,v}) - (t_{recovery} \cdot IR_{o65,v}) - (death_{o65} \cdot IR_{o65,v}) \\
+\frac{IH_{y65}(t+\Delta t) - IH_{y65}(t)}{\Delta t} &= (p_{h,y} \cdot t_{latency} \cdot E_{y65}) - (t_{hospitalization,nv} \cdot IH_{y65}) - (aging \cdot IH_{y65}) - (death_{y65} \cdot IH_{y65}) \\
+\frac{IH_{o65,nv}(t+\Delta t) - IH_{o65,nv}(t)}{\Delta t} &= (p_{h,nv} \cdot t_{latency} \cdot E_{o65,nv}) - (t_{hospitalization,nv} \cdot IH_{o65,nv}) + (aging \cdot IH_{y65}) - (death_{o65} \cdot IH_{o65,nv}) \\
+\frac{IH_{o65,v}(t+\Delta t) - IH_{o65,v}(t)}{\Delta t} &= (p_{h,v} \cdot t_{latency} \cdot E_{o65,v}) - (t_{hospitalization,v} \cdot IH_{o65,v}) - (death_{o65} \cdot IH_{o65,v}) \\
+\frac{H_{y65}(t+\Delta t) - H_{y65}(t)}{\Delta t} &= (t_{hospitalization,nv} \cdot IH_{y65}) - (t_{hospitalization,recovery,nv} \cdot H_{y65}) - (death_{y65} \cdot H_{y65}) \\
+\frac{H_{o65,nv}(t+\Delta t) - H_{o65,nv}(t)}{\Delta t} &= (t_{hospitalization,nv} \cdot IH_{o65,nv}) - (t_{hospitalization,recovery,nv} \cdot H_{o65,nv}) - (death_{o65} \cdot H_{o65,nv}) \\
+\frac{H_{o65,v}(t+\Delta t) - H_{o65,v}(t)}{\Delta t} &= (t_{hospitalization,v} \cdot IH_{o65,v}) - (t_{hospitalization,recovery,v} \cdot H_{o65,v}) - (death_{o65} \cdot H_{o65,v}) \\
+\frac{R_{y65}(t+\Delta t) - R_{y65}(t)}{\Delta t} &= (t_{recovery} \cdot IR_{y65}) + (t_{hospitalization,recovery,nv} \cdot H_{y65}) - (aging \cdot R_{y65}) - (death_{y65} \cdot R_{y65}) \\
+\frac{R_{o65,nv}(t+\Delta t) - R_{o65,nv}(t)}{\Delta t} &= (t_{recovery} \cdot IR_{o65,nv}) + (t_{hospitalization,recovery,nv} \cdot H_{o65,nv}) - (\frac{doses \cdot R_{o65,nv}}{S_{o65,nv} + R_{o65,nv}}) + (aging \cdot R_{y65}) - (death_{o65} \cdot R_{o65,nv}) \\
+\frac{R_{o65,v}(t+\Delta t) - R_{o65,v}(t)}{\Delta t} &= (t_{recovery} \cdot IR_{o65,v}) + (t_{hospitalization,recovery,v} \cdot H_{o65,v}) + (\frac{doses \cdot R_{o65,nv}}{S_{o65,nv} + R_{o65,nv}}) - (death_{o65} \cdot R_{o65,v})
+\end{align*}
+\section*{Schedule}
+Each step applies every flow once, computed from the state at the start of the step: X(n + 1) = X(n) + sum of the flows. The impulses of a step act first, and its flows run from the new state.
+
+\section*{Initialization}
+\subsection*{Bin amounts}
+\begin{longtable}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+Bin & Amount & Unit \\
+\hline
+\endhead
+S & 2.27712e+07 &  \\
+E & 0.516962 &  \\
+IR & 0.516962 &  \\
+IH & 0.516962 &  \\
+H & 0 &  \\
+R & 2.8925e+07 &  \\
+\end{longtable}
+\subsection*{Stratification fractions}
+\begin{longtable}{p{0.225\linewidth}p{0.225\linewidth}p{0.225\linewidth}p{0.225\linewidth}}
+Stratification & Category & Fraction & Of \\
+\hline
+\endhead
+age & y65 & 0.864678 & each bin \\
+age & o65 & 0.135322 & each bin \\
+vaccination & nv & 1 & o65 \\
+vaccination & v & 0 & o65 \\
+\end{longtable}
+\subsection*{Initial state}
+\begin{longtable}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+Compartment & Amount & Unit \\
+\hline
+\endhead
+S\_y65 & 1.96897e+07 &  \\
+S\_o65\_nv & 3.08145e+06 &  \\
+S\_o65\_v & 0 &  \\
+E\_y65 & 0.447006 &  \\
+E\_o65\_nv & 0.0699565 &  \\
+E\_o65\_v & 0 &  \\
+IR\_y65 & 0.447006 &  \\
+IR\_o65\_nv & 0.0699565 &  \\
+IR\_o65\_v & 0 &  \\
+IH\_y65 & 0.447006 &  \\
+IH\_o65\_nv & 0.0699565 &  \\
+IH\_o65\_v & 0 &  \\
+H\_y65 & 0 &  \\
+H\_o65\_nv & 0 &  \\
+H\_o65\_v & 0 &  \\
+R\_y65 & 2.50108e+07 &  \\
+R\_o65\_nv & 3.9142e+06 &  \\
+R\_o65\_v & 0 &  \\
+\end{longtable}
+\section*{Parameters}
+\begin{longtable}{p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}}
+Parameter & Value & Unit & Set by calibration & Description \\
+\hline
+\endhead
+beta & 0.0602054 &  & no & Transmission rate (S -\textgreater{} E) \\
+t\_latency & 0.0602052 &  & no & Latency time (E -\textgreater{} I) \\
+t\_recovery & 0.019571 &  & no & Recovery time (I -\textgreater{} R) \\
+t\_hospitalization\_nv & 0.004594 &  & no & Hospitalization time (I\_nv -\textgreater{} H\_nv) \\
+t\_hospitalization\_v & 0.00485026 &  & no & Hospitalization time vaccinated (I\_v -\textgreater{} H\_v) \\
+t\_hospitalization\_recovery\_nv & 0.00549933 &  & no & Hospitalization recovery time non vaccinated (H\_nv -\textgreater{} R\_nv) \\
+t\_hospitalization\_recovery\_v & 0.00475397 &  & no & Hospitalization recovery time vaccinated (H\_v -\textgreater{} R\_v) \\
+p\_h\_y & 0.0109246 &  & no & Hospitalization percentage \textless{}65 (E\_y65 -\textgreater{} IH\_y65) \\
+p\_h\_nv & 0.0115904 &  & no & Hospitalization percentage 65+ not vaccinated (E -\textgreater{} IH) \\
+births & 44.9092 &  & no & Birth rate \\
+aging & 1.08958e-06 &  & no & Aging rate (\textless{}65 -\textgreater{} 65+) \\
+death\_y65 & 5.21586e-08 &  & no & Death rate younger 65 \\
+death\_o65 & 3.366e-06 &  & no & Death rate 65 and older \\
+ve & 0.2 &  & no & Vaccine effectiveness against hospitalization \\
+p\_h\_v & (1 - ve) * p\_h\_nv &  & no & Hospitalization percentage vaccinated 65+ (fixed by ve) \\
+doses & series (pulse, 2912 points) &  & no & Vaccine doses given to 65+ per step \\
+\end{longtable}
+\section*{Outputs}
+\begin{longtable}{p{0.45\linewidth}p{0.45\linewidth}}
+Source & Outputs \\
+\hline
+\endhead
+S & S\_y65, S\_o65\_nv, S\_o65\_v \\
+E & E\_y65, E\_o65\_nv, E\_o65\_v \\
+IR & IR\_y65, IR\_o65\_nv, IR\_o65\_v \\
+IH & IH\_y65, IH\_o65\_nv, IH\_o65\_v \\
+H & H\_y65, H\_o65\_nv, H\_o65\_v \\
+R & R\_y65, R\_o65\_nv, R\_o65\_v \\
+hospital\_admissions & hospital\_admissions\_y65, hospital\_admissions\_o65\_nv, hospital\_admissions\_o65\_v \\
+infection\_incidence & infection\_incidence\_y65, infection\_incidence\_o65\_nv, infection\_incidence\_o65\_v \\
+\end{longtable}
+\end{document}

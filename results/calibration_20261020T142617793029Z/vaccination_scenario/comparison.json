@@ -1,0 +1,31 @@
+{
+  "scenarios": {
+    "baseline": "With vaccination campaign",
+    "no_vaccination": "Without vaccination campaign"
+  },
+  "probabilistic": false,
+  "confidence_level": null,
+  "members": 0,
+  "quantities": {
+    "infection_incidence": {
+      "baseline": 11815916.975799594,
+      "no_vaccination": 11841624.595583623,
+      "averted": 25707.6197840292
+    },
+    "hospital_admissions": {
+      "baseline": 127120.97325258439,
+      "no_vaccination": 130414.23713749627,
+      "averted": 3293.263884911881
+    },
+    "peak_hospital_occupancy": {
+      "baseline": 22253.48361001732,
+      "no_vaccination": 22541.25313485964,
+      "averted": 287.7695248423188
+    },
+    "peak_infectious": {
+      "baseline": 761754.4101527886,
+      "no_vaccination": 764557.591310876,
+      "averted": 2803.1811580873327
+    }
+  }
+}
